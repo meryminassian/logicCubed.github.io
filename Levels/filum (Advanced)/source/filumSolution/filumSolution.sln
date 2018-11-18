@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "filum", "filum\filum.csproj", "{12D8931A-AE94-47C9-B225-1CA809ABCCC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Credentials", "Credentials\Credentials.csproj", "{056AAC19-497B-4D10-9360-D1277E4A6169}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{12D8931A-AE94-47C9-B225-1CA809ABCCC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12D8931A-AE94-47C9-B225-1CA809ABCCC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12D8931A-AE94-47C9-B225-1CA809ABCCC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{056AAC19-497B-4D10-9360-D1277E4A6169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{056AAC19-497B-4D10-9360-D1277E4A6169}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{056AAC19-497B-4D10-9360-D1277E4A6169}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{056AAC19-497B-4D10-9360-D1277E4A6169}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

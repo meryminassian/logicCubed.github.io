@@ -9,10 +9,11 @@
 
 
 using Caliburn.Micro;
+using filum.Views;
 
 namespace filum.ViewModels
 {
-    public partial class ShellViewModel : Screen
+    public class LoginViewModel : Screen
     {
         private string _userName;
         private string _password;

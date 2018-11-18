@@ -1,14 +1,20 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<packages>
-  <package id="Caliburn.Micro" version="3.2.0" targetFramework="net471" />
-  <package id="Caliburn.Micro.Core" version="3.2.0" targetFramework="net471" />
-</packages>
-
-<!--
+﻿
 //                                  //
 // By Mher Movsisyan                //
 // https://github.com/MovsisyanMher //
 // For business inquiries           //
 // Email: movsisyan@protonmail.com  //
 //                                  //
--->
+
+
+
+using Caliburn.Micro;
+
+
+namespace filum.ViewModels
+{
+    public class DoneViewModel : Screen
+    {
+
+    }
+}

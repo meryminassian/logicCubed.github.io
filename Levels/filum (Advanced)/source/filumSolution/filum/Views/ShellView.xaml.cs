@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//----------------------------------//
+// By Mher Movsisyan                //
+// https://github.com/MovsisyanMher //
+// For business inquiries           //
+// Email: movsisyan@protonmail.com  //
+//----------------------------------//
+
+using System;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace filum.Views
 {
@@ -24,9 +21,34 @@ namespace filum.Views
             if (e.ChangedButton == MouseButton.Left)
                 this.DragMove();
         }
+
+        
+
         public ShellView()
         {
             InitializeComponent();
+        }
+
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
+            // No custom exit code interpretation needed, 1 if this doesn't get called and 0 if everything went fine.
+            Environment.Exit(0);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (Backend.Backlogic.CheckCredentials(Username.Text, Password.Text) == true)
+            {
+                try
+                {
+                    MessageBox.Show(Credentials.Storage.flag);
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
         }
     }
 }

@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//----------------------------------//
+// By Mher Movsisyan                //
+// https://github.com/MovsisyanMher //
+// For business inquiries           //
+// Email: movsisyan@protonmail.com  //
+//----------------------------------//
 using System.Windows;
 using Caliburn.Micro;
 using filum.ViewModels;
@@ -19,8 +20,10 @@ namespace filum
 
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
+            
             // Launch point assigned
             DisplayRootViewFor<ShellViewModel>();
+
         }
     }
 }
