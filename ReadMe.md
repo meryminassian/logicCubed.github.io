@@ -7,3 +7,7 @@ If you find bugs, this is what you have to do:
  Step 1: Determine if the bug is funny or not
  Step 2: If (Step1() == true) {Post it on r/softwaregore}
 :)
+
+We thank you for showing interest
+We also exist on Facebook:
+https://www.facebook.com/logicCubed/
