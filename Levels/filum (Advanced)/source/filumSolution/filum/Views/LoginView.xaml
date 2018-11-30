@@ -1,0 +1,49 @@
+﻿<!--
+//                                  //
+// By Mher Movsisyan                //
+// https://github.com/MovsisyanMher //
+// For business inquiries           //
+// Email: movsisyan@protonmail.com  //
+//                                  //
+-->
+    
+    
+<UserControl x:Class="filum.Views.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:filum.Views"
+        mc:Ignorable="d" 
+        Height="188" 
+        Width="450" 
+        MinWidth="450"
+        Background="#161616">
+    <StackPanel>
+        <Label  
+                Content="Username" 
+                HorizontalAlignment="Center" 
+                VerticalContentAlignment="Top" 
+                VerticalAlignment="Top" 
+                FontFamily="Segoe UI" 
+                FontSize="20"
+                Foreground="Green">
+        </Label>
+
+        <TextBox VerticalContentAlignment="Center" FontFamily="Segoe UI" FontSize="20" BorderThickness="0" x:Name="Username" Background="#101010" Foreground="Green" Height="45"></TextBox>
+
+        <!--Password -->
+        <Label  
+                Height="60"
+                Content="Password" 
+                HorizontalAlignment="Center" 
+                VerticalContentAlignment="Bottom" 
+                VerticalAlignment="Top" 
+                FontFamily="Segoe UI" 
+                FontSize="20"
+                Foreground="Green">
+        </Label>
+
+        <TextBox VerticalContentAlignment="Center" FontFamily="Segoe UI" FontSize="20" BorderThickness="0" x:Name="Password" Background="#101010" Foreground="Green" Height="45"></TextBox>
+    </StackPanel>
+</UserControl>
