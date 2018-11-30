@@ -1,10 +1,5 @@
 //#region Document access
 
-// Gets the document canvas and stores it into the canvas variable
-const canvas = document.querySelector("canvas");
-// Get the tools needed to draw in 2d 
-const context = canvas.getContext("2d");
-
 //#endregion Document access
 const aspect = {
 	SuperUltraWide: 3.6,
@@ -37,35 +32,6 @@ const aspect = {
 
 
 const resolution = {
-	width: canvas.width,
-    height: canvas.height,
-    update: () => {
-        //TODO
-    },
-	//get width() {
-	//	this.width = canvas.width;
-	//	return this.width;
-	//},
-	//set width(number){
-	//	// Check for bad input
-	//	if(number === null || number === undefined){return null};
-	//	if(typeof(number) !== "number"){return null;}
-	//	if(number >= 0){return null;}
-	//	// Eval
-	//	canvas.width = number;
-	//	this.width = canvas.width;
-	//},
-	//get height(){
-	//	this.height = canvas.height;
-	//	return this.height;
-	//},
-	//set height(number){
-    //    //TODO
-    //    this.height = number;
-	//},
-	maxoutWidth: () => {this.width = window.innerWidth; return true},
-	maxoutHeight: () => {this.width = window.innerHeight; return true},
-	maxout: () => {this.maxoutHeight(); this.maxoutWidth(); return true},
 	aspectRatio: this.width/this.height,
 	type: () => {
 		if(aspectRatio > aspect.Silver)
@@ -91,57 +57,3 @@ const resolution = {
 		//TODO
 	}
 }
-
-
-//// Returns an array of width and height
-//const getResolutionArray= () => 
-//{
-//	return [canvas.width, canvas.height];
-//};
-
-
-//// Sets the canvas width and height
-//const setResolutionArray = (arrayOfWidthAndHeight) => 
-//{
-//	// Check for bad input
-//	if(arrayOfWidthAndHeight[0] === null || arrayOfWidthAndHeight[1] === null || arrayOfWidthAndHeight[0] === undefined || arrayOfWidthAndHeight[1] === undefined){return null};
-//	if(typeOf(arrayOfWidthAndHeight[0]) !== "number"){return null;}
-//	if(typeOf(arrayOfWidthAndHeight[1]) !== "number"){return null;}
-//	// Set the canvas height and width
-//	canvas.width = arrayOfWidthAndHeight[0];
-//	canvas.height = arrayOfWidthAndHeight[1];
-//	// Indicate that the function has been called succesfully
-//	return true;
-//};
-//
-//
-//// Returns an object that has
-//const getResolution= () => 
-//{
-//	return {
-//		width: canvas.width, 
-//		height: canvas.height
-//	};
-//};
-//
-//
-//// Sets the canvas width and height
-//const setResolution = (width, height) => 
-//{
-//	// Check for bad input
-//	if(width === null || height === null || width === undefined || height === undefined){return null};
-//	if(typeOf(width) !== "number"){return null;}
-//	if(typeOf(height) !== "number"){return null;}
-//	// Set the canvas height and width
-//	canvas.width = width;
-//	canvas.height = height;
-//	// Indicate that the function has been called succesfully
-//	return true;
-//};
-    
-    
-
-// TODO:
-// 
-// 1. Events for resolution change...
-// 2. Types of devices
