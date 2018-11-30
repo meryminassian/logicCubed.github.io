@@ -13,7 +13,7 @@ function Run(){
     }
 
     context.fillStyle = rgba([16, 16, 16, AnimationCompleteness.Background])
-        
+    
     context.fillRect(0, 0, canvas.width, canvas.height)
     //#endregion Background
     
