@@ -22,9 +22,10 @@ const Theme = [
 
 let AnimationCompleteness = {
     Background: 0,
+    Cube: 100,
+    Text: 2,
+    Selector: 0,
     Skeleton: 0,
-    Text: 0,
-    Cube: 0,
     logo: 0,
     lvl1: 0,
     lvl2: 0,
@@ -45,7 +46,8 @@ let firstTimePlaying = (() =>
     localStorage.getItem("first") === undefined ||
     localStorage.getItem("first") === "true")
     {
-        localStorage.setItem("first", "false")
+        localStorage.setItem("first", "false");
+        localStorage.setItem("score", "0");
         return true;
     }
     else
@@ -58,4 +60,9 @@ let firstTimePlaying = (() =>
 let mouseLocation = [0,0];
 
 // The position of the interactive 3D cube
-let posOfCube = [canvas.width / 2, canvas. height / 2];
+let posOfCube = [canvas.width / 2, canvas.height / 2];
+
+// Listen to the first page
+let listenEntry = false;
+
+let goToSelector = false;

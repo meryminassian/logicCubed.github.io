@@ -18,8 +18,8 @@ const rgba = (array) => {
 
 // stretches the canvas to be the size of the screen
 const Maxout = () => {
-    canvas.width = 16 + window.innerWidth - (window.outerWidth - window.innerWidth);
-    canvas.height = 90 +  window.innerHeight - (window.outerHeight - window.innerHeight);
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
     posOfCube = [canvas.width / 2, canvas. height / 2];
     document.documentElement.style.overflow = 'hidden';  // Firefox, Chrome
     document.body.scroll = "no";                         // Internet explorer

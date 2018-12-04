@@ -31,29 +31,29 @@ const aspect = {
 //#region Get or set resolution
 
 
-const resolution = {
-	aspectRatio: this.width/this.height,
-	type: () => {
-		if(aspectRatio > aspect.Silver)
-		{return aspect.SuperUltraWide}
-		else if(aspectRatio > aspect.WideCinemaStandard)
-		{return aspect.Silver}
-		else if(aspectRatio > aspect.WidePC)
-		{return aspect.WideCinemaStandard}
-		else if(aspectRatio > aspect.Univisium)
-		{return aspect.WidePC}
-		else if(aspectRatio > aspect.Standard4kIMAX)
-		{return aspect.Univisium}
-		else if(aspectRatio > aspect.WideCommon)
-		{return aspect.Standard4kIMAX}
-		else if(aspectRatio > aspect.Standard)
-		{return aspect.WideCommon}
-		else if(aspectRatio > aspect.Gold)
-		{return aspect.Standard}
-		else if(aspectRatio > aspect.Common)
-		{return aspect.Gold}
-		else if(aspectRatio > aspect.Square)
-		{return aspect.Gold}
-		//TODO
-	}
-}
+//const resolution = {
+//	aspectRatio: this.width/this.height,
+//	type: () => {
+//		if(aspectRatio > aspect.Silver)
+//		{return aspect.SuperUltraWide}
+//		else if(aspectRatio > aspect.WideCinemaStandard)
+//		{return aspect.Silver}
+//		else if(aspectRatio > aspect.WidePC)
+//		{return aspect.WideCinemaStandard}
+//		else if(aspectRatio > aspect.Univisium)
+//		{return aspect.WidePC}
+//		else if(aspectRatio > aspect.Standard4kIMAX)
+//		{return aspect.Univisium}
+//		else if(aspectRatio > aspect.WideCommon)
+//		{return aspect.Standard4kIMAX}
+//		else if(aspectRatio > aspect.Standard)
+//		{return aspect.WideCommon}
+//		else if(aspectRatio > aspect.Gold)
+//		{return aspect.Standard}
+//		else if(aspectRatio > aspect.Common)
+//		{return aspect.Gold}
+//		else if(aspectRatio > aspect.Square)
+//		{return aspect.Gold}
+//		//TODO
+//	}
+//}
