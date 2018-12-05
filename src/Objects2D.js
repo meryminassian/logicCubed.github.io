@@ -289,9 +289,9 @@ const logoTRI = (x, y) => {
     const logoo = {
         x: x, 
         y: y,
-        triangle1: Triangle(x, y, 100, rgba(Theme[1]), rgba(Theme[1]), 0),
-        triangle3: Triangle(x, y, 150, rgba(Theme[0]), rgba(Theme[1]), 0),
-        triangle2: Triangle(x + 15,  y - 8,  45, rgba(Theme[0]), rgba(Theme[0]), 0),
+        triangle1: Triangle(x, y, 2 * levelSider(), rgba(Theme[1]), rgba(Theme[1]), 0),
+        triangle3: Triangle(x, y, 3 * levelSider(), rgba(Theme[0]), rgba(Theme[1]), 0),
+        triangle2: Triangle(x + 15/50 * levelSider(),  y - 8/50 * levelSider(),  0.9 * levelSider(), rgba(Theme[0]), rgba(Theme[0]), 0),
         draw: () => {
             logoo.triangle3.draw();
             logoo.triangle1.draw();

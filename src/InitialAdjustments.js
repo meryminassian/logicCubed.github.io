@@ -25,7 +25,6 @@ let AnimationCompleteness = {
     Cube: 100,
     Text: 2,
     Selector: 0,
-    Skeleton: 0,
     logo: 0,
     lvl1: 0,
     lvl2: 0,
@@ -36,7 +35,12 @@ let AnimationCompleteness = {
     poplvl2: 0,
     poplvl3: 0,
     poplvl4: 0,
-    poplvl5: 0
+    poplvl5: 0,
+    poplvl1Bool: false,
+    poplvl2Bool: false,
+    poplvl3Bool: false,
+    poplvl4Bool: false,
+    poplvl5Bool: false
 };
 
 // Determine if it is the first time the player has opened the CTF using this browser
@@ -64,5 +68,6 @@ let posOfCube = [canvas.width / 2, canvas.height / 2];
 
 // Listen to the first page
 let listenEntry = false;
-
+// Trigger transmission to the level selector page
 let goToSelector = false;
+

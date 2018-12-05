@@ -5,13 +5,11 @@
 // https://www.facebook.com/logicCubed/
 
 //#region Event handlers
-
 // Track the mouse movement of the player
 document.addEventListener("mousemove", onMUpdate, false);
 // Track the mousewheel of the player
 document.addEventListener("wheel", onWUpdate, false);
-// Track key presses
-document.addEventListener("keydown", onKey, false);
+// Track clicks
 document.addEventListener("mousedown", onMouse, false);
 
 
@@ -40,18 +38,6 @@ function onWUpdate(e)
 
 
 // This gets hoisted
-function onKey(e)
-{
-    if(listenEntry && !goToSelector)
-    {
-        goToSelector = true;
-    }
-    
-}
-
-
-
-// This gets hoisted
 function onMouse(e)
 {
     if(listenEntry && !goToSelector)
@@ -65,25 +51,30 @@ function onMouse(e)
         {
             console.log(1);
         }
+        // lvl2
         else if(distance(e.clientX, e.clientY, canvas.width * 13/32, canvas.height * 5/8) < 5 * levelSider()/8)
         {
             console.log(2);
         }
+        // lvl3
         else if(distance(e.clientX, e.clientY, canvas.width/2, canvas.height * 3/4) < 5 * levelSider()/8)
         {
             console.log(3);
         }
+        // lvl4
         else if(distance(e.clientX, e.clientY, canvas.width * 19/32, canvas.height * 5/8) < 5 * levelSider()/8)
         {
             console.log(4);
         }
+        // lvl5
         else if(distance(e.clientX, e.clientY, canvas.width * 39/64, canvas.height/2) < 5 * levelSider()/8)
         {
             console.log(5);
         }
+        // readme
         else if(distance(e.clientX, e.clientY, 5 + levelSider(), 5 + levelSider()) < 5 * levelSider()/8)
         {
-            console.log(5);
+            console.log("readme");
         }
     }
 }

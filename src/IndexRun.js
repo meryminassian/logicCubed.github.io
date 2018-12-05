@@ -63,7 +63,7 @@ const Cast = () =>
     
     Cubely.SetColor(rgba([AnimationCompleteness.Selector, 255, AnimationCompleteness.Selector, 1]))
     cubeSizer += 0.01;
-    posOfCube = [canvas.width / 2, (canvas.height / 2) + AnimationCompleteness.Cube*20  - (AnimationCompleteness.Selector/250 * (canvas.height/4))]
+    posOfCube = [canvas.width / 2, (canvas.height / 2) + AnimationCompleteness.Cube*20  - (AnimationCompleteness.Selector/250 * (canvas.height/8 * 3))]
     Cubely.SetSize((75 + (3 * AnimationCompleteness.Cube * Math.sin(Math.PI * cubeSizer))) - AnimationCompleteness.Selector/255 * 25);
     Cubely.update();
     
@@ -75,13 +75,46 @@ const Cast = () =>
 
     if(goToSelector)
     {
-        let Level1 = Triangle(canvas.width * 25/64  , canvas.height/2       + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * (2 * Math.PI - angle(canvas.width * 25/64  , canvas.height/2       + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988);
-        let Level2 = Triangle(canvas.width * 13/32  , canvas.height * 5/8   + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * (2 * Math.PI - angle(canvas.width * 13/32  , canvas.height * 5/8   + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988);
-        let Level3 = Triangle(canvas.width/2        , canvas.height * 3/4   + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * (2 * Math.PI - angle(canvas.width/2        , canvas.height * 3/4   + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988);
-        let Level4 = Triangle(canvas.width * 19/32  , canvas.height * 5/8   + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * (2 * Math.PI - angle(canvas.width * 19/32  , canvas.height * 5/8   + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988);
-        let Level5 = Triangle(canvas.width * 39/64  , canvas.height/2       + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * (2 * Math.PI - angle(canvas.width * 39/64  , canvas.height/2       + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988);
+        // Lvl1
+        if(AnimationCompleteness.poplvl1Bool)
+        {
+            if(AnimationCompleteness.poplvl1 < 1){ AnimationCompleteness.poplvl1 += 0.02}
+        }
+        else if(AnimationCompleteness.poplvl1 > 0){ AnimationCompleteness.poplvl1 -= 0.02}
+
+        // Lvl2
+        if(AnimationCompleteness.poplvl1Bool)
+        {
+            if(AnimationCompleteness.poplvl1 < 1){ AnimationCompleteness.poplvl1 += 0.02}
+        }
+        else if(AnimationCompleteness.poplvl1 > 0){ AnimationCompleteness.poplvl1 -= 0.02}
+
+        // Lvl3
+        if(AnimationCompleteness.poplvl1Bool)
+        {
+            if(AnimationCompleteness.poplvl1 < 1){ AnimationCompleteness.poplvl1 += 0.02}
+        }
+        else if(AnimationCompleteness.poplvl1 > 0){ AnimationCompleteness.poplvl1 -= 0.02}
+
+        // Lvl4
+        if(AnimationCompleteness.poplvl1Bool)
+        {
+            if(AnimationCompleteness.poplvl1 < 1){ AnimationCompleteness.poplvl1 += 0.02}
+        }
+        else if(AnimationCompleteness.poplvl1 > 0){ AnimationCompleteness.poplvl1 -= 0.02}
+
+
+
+
+
+
+        let Level1 = Triangle(canvas.width * 25/64 - getAspectRatio() * levelSider(), canvas.height/2       + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * (2 * Math.PI - angle(canvas.width * 25/64 - getAspectRatio() * levelSider(), canvas.height/2       + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988);
+        let Level2 = Triangle(canvas.width * 13/32 - getAspectRatio() * levelSider(), canvas.height * 5/8   + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * (2 * Math.PI - angle(canvas.width * 13/32 - getAspectRatio() * levelSider(), canvas.height * 5/8   + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988);
+        let Level3 = Triangle(canvas.width/2                                        , canvas.height * 3/4   + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * (2 * Math.PI - angle(canvas.width / 2                                      , canvas.height * 3/4   + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988);
+        let Level4 = Triangle(canvas.width * 19/32 + getAspectRatio() * levelSider(), canvas.height * 5/8   + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * (2 * Math.PI - angle(canvas.width * 19/32 + getAspectRatio() * levelSider(), canvas.height * 5/8   + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988);
+        let Level5 = Triangle(canvas.width * 39/64 + getAspectRatio() * levelSider(), canvas.height/2       + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * (2 * Math.PI - angle(canvas.width * 39/64 + getAspectRatio() * levelSider(), canvas.height/2       + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988);
         let ReadMe = Triangle(5 + levelSider()      , 5 + levelSider()      + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), Math.cos(cubeSizer) * Math.PI);
-        let Logo = logoTRI(canvas.width/2, canvas.height/2);
+        let Logo = logoTRI(canvas.width/2, canvas.height/2 + (255/(1 + AnimationCompleteness.Selector)));
         Logo.draw();
         Level1.draw();
         Level2.draw();
@@ -92,15 +125,15 @@ const Cast = () =>
         context.font = (levelSider()/3) + "px Segoe UI"
         context.textAlign = "center";
         context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.lvl1]);
-        context.fillText("I", canvas.width * 25/64, canvas.height/2 + levelSider()/6 - 1, 100);
+        context.fillText("I", canvas.width * 25/64 - getAspectRatio() * levelSider(), canvas.height/2 + levelSider()/6 - 1, 100);
         context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.lvl2]);
-        context.fillText("II", canvas.width * 13/32, canvas.height * 5/8 + levelSider()/6 - 1, 100);
+        context.fillText("II", canvas.width * 13/32 - getAspectRatio() * levelSider(), canvas.height * 5/8 + levelSider()/6 - 1, 100);
         context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.lvl3]);
-        context.fillText("II", canvas.width/2, canvas.height * 3/4 + levelSider()/6 - 1, 100);
+        context.fillText("III", canvas.width/2, canvas.height * 3/4 + levelSider()/6 - 1, 100);
         context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.lvl4]);
-        context.fillText("IV", canvas.width * 19/32, canvas.height * 5/8 + levelSider()/6 - 1, 100);
+        context.fillText("IV", canvas.width * 19/32 + getAspectRatio() * levelSider(), canvas.height * 5/8 + levelSider()/6 - 1, 100);
         context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.lvl5]);
-        context.fillText("V", canvas.width * 39/64, canvas.height/2 + levelSider()/6 - 1, 100);
+        context.fillText("V", canvas.width * 39/64 + getAspectRatio() * levelSider(), canvas.height/2 + levelSider()/6 - 1, 100);
         context.fillText("?", 5 + levelSider(), 5 + levelSider() + levelSider()/6 - 1, 100);
     }
 }
