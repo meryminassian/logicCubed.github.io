@@ -75,12 +75,14 @@ const Cast = () =>
 
     if(goToSelector)
     {
-        let Level1 = Triangle(canvas.width * 25/64  , canvas.height/2       + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * -Math.PI / 2);
-        let Level2 = Triangle(canvas.width * 13/32  , canvas.height * 5/8   + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * 2 * Math.PI / 3);
-        let Level3 = Triangle(canvas.width/2        , canvas.height * 3/4   + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * Math.PI);
-        let Level4 = Triangle(canvas.width * 19/32  , canvas.height * 5/8   + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * 2 * Math.PI / 3);
-        let Level5 = Triangle(canvas.width * 39/64  , canvas.height/2       + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * Math.PI / 2);
+        let Level1 = Triangle(canvas.width * 25/64  , canvas.height/2       + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * (2 * Math.PI - angle(canvas.width * 25/64  , canvas.height/2       + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988);
+        let Level2 = Triangle(canvas.width * 13/32  , canvas.height * 5/8   + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * (2 * Math.PI - angle(canvas.width * 13/32  , canvas.height * 5/8   + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988);
+        let Level3 = Triangle(canvas.width/2        , canvas.height * 3/4   + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * (2 * Math.PI - angle(canvas.width/2        , canvas.height * 3/4   + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988);
+        let Level4 = Triangle(canvas.width * 19/32  , canvas.height * 5/8   + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * (2 * Math.PI - angle(canvas.width * 19/32  , canvas.height * 5/8   + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988);
+        let Level5 = Triangle(canvas.width * 39/64  , canvas.height/2       + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), AnimationCompleteness.Selector/255 * (2 * Math.PI - angle(canvas.width * 39/64  , canvas.height/2       + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988);
         let ReadMe = Triangle(5 + levelSider()      , 5 + levelSider()      + (255/(1 + AnimationCompleteness.Selector)), levelSider(), rgba(Theme[0]), rgba(Theme[4]), Math.cos(cubeSizer) * Math.PI);
+        let Logo = logoTRI(canvas.width/2, canvas.height/2);
+        Logo.draw();
         Level1.draw();
         Level2.draw();
         Level3.draw();

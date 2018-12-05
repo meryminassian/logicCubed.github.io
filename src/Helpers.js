@@ -94,6 +94,12 @@ const levelSider = () =>
 };
 
 
+// Gets the angle between two points
+const angle = (x, y, x_2, y_2) => 
+{
+    return Math.atan2((y - y_2), (x_2 - x));
+}
+
 
 
 //#endregion Helpers
