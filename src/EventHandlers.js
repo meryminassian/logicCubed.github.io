@@ -12,7 +12,8 @@ document.addEventListener("mousemove", onMUpdate, false);
 document.addEventListener("wheel", onWUpdate, false);
 // Track key presses
 document.addEventListener("keydown", onKey, false);
-document.addEventListener("mousedown", onKey, false);
+document.addEventListener("mousedown", onMouse, false);
+
 
 
 // This gets hoisted
@@ -25,6 +26,8 @@ function onMUpdate(e)
     mouseLocation = [e.pageX, e.pageY];
 }
 
+
+
 // This gets hoisted
 function onWUpdate(e)
 {
@@ -34,6 +37,8 @@ function onWUpdate(e)
     Cubely.dz += 0.01 * e.deltaY;
 }
 
+
+
 // This gets hoisted
 function onKey(e)
 {
@@ -42,6 +47,41 @@ function onKey(e)
         goToSelector = true;
     }
     
+}
+
+
+
+// This gets hoisted
+function onMouse(e)
+{
+    if(listenEntry && !goToSelector)
+    {
+        goToSelector = true;
+    }
+    else if(AnimationCompleteness.lvl5 >= 1)
+    {
+        // lvl1
+        if(distance(e.clientX, e.clientY, canvas.width * 25/64, canvas.height/2) < 5 * levelSider()/8)
+        {
+            console.log(1);
+        }
+        else if(distance(e.clientX, e.clientY, canvas.width * 13/32, canvas.height * 5/8) < 5 * levelSider()/8)
+        {
+            console.log(2);
+        }
+        else if(distance(e.clientX, e.clientY, canvas.width/2, canvas.height * 3/4) < 5 * levelSider()/8)
+        {
+            console.log(3);
+        }
+        else if(distance(e.clientX, e.clientY, canvas.width * 19/32, canvas.height * 5/8) < 5 * levelSider()/8)
+        {
+            console.log(4);
+        }
+        else if(distance(e.clientX, e.clientY, canvas.width * 39/64, canvas.height/2) < 5 * levelSider()/8)
+        {
+            console.log(5);
+        }
+    }
 }
 
 
