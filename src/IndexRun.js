@@ -100,7 +100,5 @@ const Cast = () =>
         context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.lvl5]);
         context.fillText("V", canvas.width * 39/64, canvas.height/2 + levelSider()/6 - 1, 100);
         context.fillText("?", 5 + levelSider(), 5 + levelSider() + levelSider()/6 - 1, 100);
-
     }
-
 }

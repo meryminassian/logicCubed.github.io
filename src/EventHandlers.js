@@ -81,6 +81,10 @@ function onMouse(e)
         {
             console.log(5);
         }
+        else if(distance(e.clientX, e.clientY, 5 + levelSider(), 5 + levelSider()) < 5 * levelSider()/8)
+        {
+            console.log(5);
+        }
     }
 }
 
