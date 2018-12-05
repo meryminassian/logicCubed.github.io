@@ -3,12 +3,3 @@
 // We exist on Github at https://github.com/meryminas/logicCubed.github.io/
 // We also exist on Facebook:
 // https://www.facebook.com/logicCubed/
-
-function Run(){
-    Maxout();
-    
-    Cast();
-    window.requestAnimationFrame(Run);
-}
-
-Run();

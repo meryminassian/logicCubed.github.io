@@ -7,19 +7,28 @@
 //#region Helpers
 
 // turns csv into array
-const addPoint = (x, y, z) => {
+const addPoint = (x, y, z) => 
+{
     return [x, y, z]
 }
 
+const distance = (x, y, x_2, y_2) => 
+{
+    return Math.sqrt(Math.pow(x - x_2, 2) + Math.pow(y - y_2, 2))
+};
+
+
 // Turns an array into an rgba color that is interpretable by the canvas
-const rgba = (array) => {
+const rgba = (array) => 
+{
     return "rgba(" + array[0] + ", " + array[1] + ", " + array[2] + ", " + array[3] + ")";
 }
 
 // stretches the canvas to be the size of the screen
-const Maxout = () => {
-    canvas.width = 16 + window.innerWidth - (window.outerWidth - window.innerWidth);
-    canvas.height = 90 +  window.innerHeight - (window.outerHeight - window.innerHeight);
+const Maxout = () => 
+{
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
     posOfCube = [canvas.width / 2, canvas. height / 2];
     document.documentElement.style.overflow = 'hidden';  // Firefox, Chrome
     document.body.scroll = "no";                         // Internet explorer
@@ -28,7 +37,8 @@ Maxout();
 
 
 // Gets the score from the local storage (10 mb max)
-const GetScore = () => {
+const GetScore = () => 
+{
     if(firstTimePlaying){
         SetScore(0);
         return 0;
@@ -41,7 +51,8 @@ const GetScore = () => {
 
 
 // Sets the score
-const SetScore = (score) => {
+const SetScore = (score) => 
+{
     localStorage.setItem("score", score + "");
 }
 
@@ -66,6 +77,23 @@ const Rotate = (x, y, Theta, aboutX, aboutY) =>
     const rotatedGlobalPoint = [rotatedLocalizedPoint[0] + aboutX, rotatedLocalizedPoint[1] + aboutY];
     return rotatedGlobalPoint;
 };
+
+
+
+//  Determines the appropriate size of the triangle level buttons
+const levelSider = () => 
+{
+    if(canvas.height < canvas.width)
+    {
+        return canvas.height/14
+    }
+    else
+    {
+        return canvas.width/14
+    }
+};
+
+
 
 
 //#endregion Helpers
