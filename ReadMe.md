@@ -1,4 +1,4 @@
-#*Welcome to the Logic Cubed!*
+# **Welcome to the Logic Cubed!**
 
 
 This is a CTF that has one goal.
