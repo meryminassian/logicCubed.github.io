@@ -60,8 +60,7 @@ function onMouse(e)
                     e.clientX,
                     e.clientY,
                     canvas.width/2 + levelSider() * 0.07,
-                    canvas.height/4 + levelSider() * 7.65
-                ) < levelSider())
+                    canvas.height/4 + levelSider() * 7.65) < levelSider())
                 {
                     AnimationCompleteness.readmeBool = false;
                 }
@@ -72,8 +71,7 @@ function onMouse(e)
                     e.clientX,
                     e.clientY,
                     canvas.width/2 + levelSider() * 0.07,
-                    canvas.height/4 + levelSider() * 7.65
-                ) < levelSider())
+                    canvas.height/4 + levelSider() * 7.65) < levelSider())
                 {
                     AnimationCompleteness.poplvl1Bool = false;
                 }
@@ -84,8 +82,7 @@ function onMouse(e)
                     e.clientX,
                     e.clientY,
                     canvas.width/2 + levelSider() * 0.07,
-                    canvas.height/4 + levelSider() * 7.65
-                ) < levelSider())
+                    canvas.height/4 + levelSider() * 7.65) < levelSider())
                 {
                     AnimationCompleteness.poplvl2Bool = false;
                 }
@@ -96,8 +93,7 @@ function onMouse(e)
                     e.clientX,
                     e.clientY,
                     canvas.width/2 + levelSider() * 0.07,
-                    canvas.height/4 + levelSider() * 7.65
-                ) < levelSider())
+                    canvas.height/4 + levelSider() * 7.65) < levelSider())
                 {
                     AnimationCompleteness.poplvl3Bool = false;
                 }
@@ -108,8 +104,7 @@ function onMouse(e)
                     e.clientX,
                     e.clientY,
                     canvas.width/2 + levelSider() * 0.07,
-                    canvas.height/4 + levelSider() * 7.65
-                ) < levelSider())
+                    canvas.height/4 + levelSider() * 7.65) < levelSider())
                 {
                     AnimationCompleteness.poplvl4Bool = false;
                 }
@@ -120,8 +115,7 @@ function onMouse(e)
                     e.clientX,
                     e.clientY,
                     canvas.width/2 + levelSider() * 0.07,
-                    canvas.height/4 + levelSider() * 7.65
-                ) < levelSider())
+                    canvas.height/4 + levelSider() * 7.65) < levelSider())
                 {
                     AnimationCompleteness.poplvl5Bool = false;
                 }
