@@ -36,11 +36,19 @@ let AnimationCompleteness = {
     poplvl3: 0,
     poplvl4: 0,
     poplvl5: 0,
+    readme: 0,
     poplvl1Bool: false,
     poplvl2Bool: false,
     poplvl3Bool: false,
     poplvl4Bool: false,
-    poplvl5Bool: false
+    poplvl5Bool: false,
+    readmeBool: false,
+    contentlvl1: 0,
+    contentlvl2: 0,
+    contentlvl3: 0,
+    contentlvl4: 0,
+    contentlvl5: 0,
+    contentreadme: 0
 };
 
 // Determine if it is the first time the player has opened the CTF using this browser

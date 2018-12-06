@@ -46,35 +46,72 @@ function onMouse(e)
     }
     else if(AnimationCompleteness.lvl5 >= 1)
     {
-        // lvl1
-        if(distance(e.clientX, e.clientY, canvas.width * 25/64, canvas.height/2) < 5 * levelSider()/8)
+        // Checks if the page is stil on the selector
+        if( AnimationCompleteness.poplvl1Bool ||
+            AnimationCompleteness.poplvl2Bool ||
+            AnimationCompleteness.poplvl3Bool ||
+            AnimationCompleteness.poplvl4Bool ||
+            AnimationCompleteness.poplvl5Bool ||
+            AnimationCompleteness.readmeBool)
         {
-            console.log(1);
+            if(AnimationCompleteness.readmeBool)
+            {
+                if(distance(
+                    e.clientX,
+                    e.clientY,
+                    canvas.width/2 + levelSider() * 0.07,
+                    canvas.height/4 + levelSider() * 7.65
+                ))
+            }
+        }
+        // lvl1
+        else if(distance(e.clientX, 
+            e.clientY, 
+            (canvas.width * 25/64 - getAspectRatio() * levelSider()), 
+            (canvas.height/2 + (255/(1 + AnimationCompleteness.Selector)))) < 5 * levelSider()/8)
+        {
+            AnimationCompleteness.poplvl1Bool = true;
+            console.log(1)
         }
         // lvl2
-        else if(distance(e.clientX, e.clientY, canvas.width * 13/32, canvas.height * 5/8) < 5 * levelSider()/8)
+        else if(distance(e.clientX, 
+            e.clientY, 
+            canvas.width * 13/32, 
+            canvas.height * 5/8) < 5 * levelSider()/8)
         {
-            console.log(2);
+            AnimationCompleteness.poplvl2Bool = true;
         }
         // lvl3
-        else if(distance(e.clientX, e.clientY, canvas.width/2, canvas.height * 3/4) < 5 * levelSider()/8)
+        else if(distance(e.clientX,
+            e.clientY, 
+            canvas.width/2, 
+            canvas.height * 3/4) < 5 * levelSider()/8)
         {
-            console.log(3);
+            AnimationCompleteness.poplvl3Bool = true;
         }
         // lvl4
-        else if(distance(e.clientX, e.clientY, canvas.width * 19/32, canvas.height * 5/8) < 5 * levelSider()/8)
+        else if(distance(e.clientX, 
+            e.clientY, 
+            canvas.width * 19/32, 
+            canvas.height * 5/8) < 5 * levelSider()/8)
         {
-            console.log(4);
+            AnimationCompleteness.poplvl4Bool = true;
         }
         // lvl5
-        else if(distance(e.clientX, e.clientY, canvas.width * 39/64, canvas.height/2) < 5 * levelSider()/8)
+        else if(distance(e.clientX, 
+            e.clientY, 
+            canvas.width * 39/64, 
+            canvas.height/2) < 5 * levelSider()/8)
         {
-            console.log(5);
+            AnimationCompleteness.poplvl5Bool = true;
         }
         // readme
-        else if(distance(e.clientX, e.clientY, 5 + levelSider(), 5 + levelSider()) < 5 * levelSider()/8)
+        else if(distance(e.clientX, 
+            e.clientY, 
+            5 + levelSider(), 
+            5 + levelSider()) < 5 * levelSider()/8)
         {
-            console.log("readme");
+            AnimationCompleteness.readmeBool = true;
         }
     }
 }
