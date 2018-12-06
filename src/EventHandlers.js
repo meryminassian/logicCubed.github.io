@@ -61,7 +61,70 @@ function onMouse(e)
                     e.clientY,
                     canvas.width/2 + levelSider() * 0.07,
                     canvas.height/4 + levelSider() * 7.65
-                ))
+                ) < levelSider())
+                {
+                    AnimationCompleteness.readmeBool = false;
+                }
+            }
+            if(AnimationCompleteness.poplvl1Bool)
+            {
+                if(distance(
+                    e.clientX,
+                    e.clientY,
+                    canvas.width/2 + levelSider() * 0.07,
+                    canvas.height/4 + levelSider() * 7.65
+                ) < levelSider())
+                {
+                    AnimationCompleteness.poplvl1Bool = false;
+                }
+            }
+            if(AnimationCompleteness.poplvl2Bool)
+            {
+                if(distance(
+                    e.clientX,
+                    e.clientY,
+                    canvas.width/2 + levelSider() * 0.07,
+                    canvas.height/4 + levelSider() * 7.65
+                ) < levelSider())
+                {
+                    AnimationCompleteness.poplvl2Bool = false;
+                }
+            }
+            if(AnimationCompleteness.poplvl3Bool)
+            {
+                if(distance(
+                    e.clientX,
+                    e.clientY,
+                    canvas.width/2 + levelSider() * 0.07,
+                    canvas.height/4 + levelSider() * 7.65
+                ) < levelSider())
+                {
+                    AnimationCompleteness.poplvl3Bool = false;
+                }
+            }
+            if(AnimationCompleteness.poplvl4Bool)
+            {
+                if(distance(
+                    e.clientX,
+                    e.clientY,
+                    canvas.width/2 + levelSider() * 0.07,
+                    canvas.height/4 + levelSider() * 7.65
+                ) < levelSider())
+                {
+                    AnimationCompleteness.poplvl4Bool = false;
+                }
+            }
+            if(AnimationCompleteness.poplvl5Bool)
+            {
+                if(distance(
+                    e.clientX,
+                    e.clientY,
+                    canvas.width/2 + levelSider() * 0.07,
+                    canvas.height/4 + levelSider() * 7.65
+                ) < levelSider())
+                {
+                    AnimationCompleteness.poplvl5Bool = false;
+                }
             }
         }
         // lvl1
