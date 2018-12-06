@@ -1,0 +1,1 @@
+const j89e = 0, userInput = Input.GetField(), auth = (comp, input) => {if(comp == input) Authorize();},p22 = 12,aja9 = "tt3";let be52 = 670, artt9e = "33fe", cttf = "cCTF{", eetf = "}32w";const returnee = () => {be52 + j89e + (aja9 + p22) + artt9e} cttf + returnee() + eetf

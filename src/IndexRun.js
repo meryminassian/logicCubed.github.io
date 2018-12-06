@@ -78,42 +78,83 @@ const Cast = () =>
         // Lvl1
         if(AnimationCompleteness.poplvl1Bool)
         {
-            if(AnimationCompleteness.poplvl1 < 1){ AnimationCompleteness.poplvl1 += 0.02}
+            if(AnimationCompleteness.poplvl1 < 1)
+            {
+                AnimationCompleteness.poplvl1 += 0.02;
+            }
         }
-        else if(AnimationCompleteness.poplvl1 > 0){ AnimationCompleteness.poplvl1 -= 0.02}
+        else if(AnimationCompleteness.poplvl1 > 0)
+        {
+            AnimationCompleteness.poplvl1 -= 0.02;
+        }
 
         // Lvl2
         if(AnimationCompleteness.poplvl2Bool)
         {
-            if(AnimationCompleteness.poplvl2 < 1){ AnimationCompleteness.poplvl2 += 0.02}
+            if(AnimationCompleteness.poplvl2 < 1)
+            {
+                AnimationCompleteness.poplvl2 += 0.02;
+            }
         }
-        else if(AnimationCompleteness.poplvl2 > 0){ AnimationCompleteness.poplvl2 -= 0.02}
+        else if(AnimationCompleteness.poplvl2 > 0)
+        {
+            AnimationCompleteness.poplvl2 -= 0.02;
+        }
 
         // Lvl3
         if(AnimationCompleteness.poplvl3Bool)
         {
-            if(AnimationCompleteness.poplvl3 < 1){ AnimationCompleteness.poplvl3 += 0.02}
+            if(AnimationCompleteness.poplvl3 < 1)
+            {
+                AnimationCompleteness.poplvl3 += 0.02;
+            }
         }
-        else if(AnimationCompleteness.poplvl3 > 0){ AnimationCompleteness.poplvl3 -= 0.02}
+        else if(AnimationCompleteness.poplvl3 > 0)
+        {
+            AnimationCompleteness.poplvl3 -= 0.02;
+        }
 
         // Lvl4
         if(AnimationCompleteness.poplvl4Bool)
         {
-            if(AnimationCompleteness.poplvl4 < 1){ AnimationCompleteness.poplvl4 += 0.02}
+            if(AnimationCompleteness.poplvl4 < 1)
+            {
+                AnimationCompleteness.poplvl4 += 0.02;
+                if(AnimationCompleteness.contentlvl4 > 0)
+                {
+                    AnimationCompleteness.contentlvl4 -= 0.1;
+                }
+            }
         }
-        else if(AnimationCompleteness.poplvl4 > 0){ AnimationCompleteness.poplvl4 -= 0.02}
+        else if(AnimationCompleteness.poplvl4 > 0)
+        {
+            AnimationCompleteness.poplvl4 -= 0.02
+        }
 
         // Lvl5
         if(AnimationCompleteness.poplvl5Bool)
         {
-            if(AnimationCompleteness.poplvl5 < 1){ AnimationCompleteness.poplvl5 += 0.02}
+            if(AnimationCompleteness.poplvl5 < 1)
+            {
+                AnimationCompleteness.poplvl5 += 0.02
+                if(AnimationCompleteness.contentlvl5 > 0)
+                {
+                    AnimationCompleteness.contentlvl5 -= 0.1;
+                }
+            }
         }
-        else if(AnimationCompleteness.poplvl5 > 0){ AnimationCompleteness.poplvl5 -= 0.02}
+        else if(AnimationCompleteness.poplvl5 > 0)
+        {
+            AnimationCompleteness.poplvl5 -= 0.02;
+        }
 
         // readme
         if(AnimationCompleteness.readmeBool)
         {
-            if(AnimationCompleteness.readme < 1){ AnimationCompleteness.readme += 0.02}
+            if(AnimationCompleteness.readme < 1)
+            {
+                AnimationCompleteness.readme += 0.02;
+            }
         }
         else if(AnimationCompleteness.readme > 0)
         {
@@ -131,7 +172,10 @@ const Cast = () =>
                                 levelSider() + (levelSider() * 16 * AnimationCompleteness.poplvl1), 
                                 rgba(Theme[0]), 
                                 rgba(Theme[4]), 
-                                AnimationCompleteness.Selector/255 * ((2 * Math.PI - angle(canvas.width * 25/64 - getAspectRatio() * levelSider(), canvas.height / 2 + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988) * (1 - AnimationCompleteness.poplvl1));
+                                AnimationCompleteness.Selector/255 * ((2 * Math.PI - angle( canvas.width * 25/64 - getAspectRatio() * levelSider(), 
+                                                                                            canvas.height / 2 + (255/(1 + AnimationCompleteness.Selector)), 
+                                                                                            mouseLocation[0], 
+                                                                                            mouseLocation[1])) - 0.5235988) * (1 - AnimationCompleteness.poplvl1));
         
         
         let Level2 = Triangle(  (canvas.width * 13/32 - getAspectRatio() * levelSider()) * (1 - AnimationCompleteness.poplvl2) + AnimationCompleteness.poplvl2 * canvas.width / 2,
@@ -139,38 +183,53 @@ const Cast = () =>
                                 levelSider() + (levelSider() * 16 * AnimationCompleteness.poplvl2), 
                                 rgba(Theme[0]), 
                                 rgba(Theme[4]), 
-                                AnimationCompleteness.Selector/255 * ((2 * Math.PI - angle(canvas.width * 13/32 - getAspectRatio() * levelSider(), canvas.height * 5/8 + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988) * (1 - AnimationCompleteness.poplvl2));
+                                AnimationCompleteness.Selector/255 * ((2 * Math.PI - angle( canvas.width * 13/32 - getAspectRatio() * levelSider(), 
+                                                                                            canvas.height * 5/8 + (255/(1 + AnimationCompleteness.Selector)), 
+                                                                                            mouseLocation[0], 
+                                                                                            mouseLocation[1])) - 0.5235988) * (1 - AnimationCompleteness.poplvl2));
         
         let Level3 = Triangle(  (canvas.width / 2)  * (1 - AnimationCompleteness.poplvl3) + AnimationCompleteness.poplvl3 * canvas.width / 2,
                                 (canvas.height * 3/4 + (255/(1 + AnimationCompleteness.Selector))) * (1 - AnimationCompleteness.poplvl3) + AnimationCompleteness.poplvl3 * canvas.height / 2, 
                                 levelSider() + (levelSider() * 16 * AnimationCompleteness.poplvl3), 
                                 rgba(Theme[0]), 
                                 rgba(Theme[4]), 
-                                AnimationCompleteness.Selector/255 * ((2 * Math.PI - angle(canvas.width / 2, canvas.height * 3/4   + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988) * (1 - AnimationCompleteness.poplvl3));
+                                AnimationCompleteness.Selector/255 * ((2 * Math.PI - angle( canvas.width / 2, 
+                                                                                            canvas.height * 3/4   + (255/(1 + AnimationCompleteness.Selector)), 
+                                                                                            mouseLocation[0], 
+                                                                                            mouseLocation[1])) - 0.5235988) * (1 - AnimationCompleteness.poplvl3));
         
         let Level4 = Triangle(  (canvas.width * 19/32 + getAspectRatio() * levelSider()) * (1 - AnimationCompleteness.poplvl4) + AnimationCompleteness.poplvl4 * canvas.width / 2,
                                 (canvas.height * 5/8   + (255/(1 + AnimationCompleteness.Selector))) * (1 - AnimationCompleteness.poplvl4) + AnimationCompleteness.poplvl4 * canvas.height / 2, 
                                 levelSider()  + (levelSider() * 16 * AnimationCompleteness.poplvl4), 
                                 rgba(Theme[0]), 
                                 rgba(Theme[4]), 
-                                AnimationCompleteness.Selector/255 * ((2 * Math.PI - angle(canvas.width * 19/32 + getAspectRatio() * levelSider(), canvas.height * 5/8   + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988) * (1 - AnimationCompleteness.poplvl4));
+                                AnimationCompleteness.Selector/255 * ((2 * Math.PI - angle( canvas.width * 19/32 + getAspectRatio() * levelSider(), 
+                                                                                            canvas.height * 5/8   + (255/(1 + AnimationCompleteness.Selector)),
+                                                                                            mouseLocation[0], 
+                                                                                            mouseLocation[1] )) - 0.5235988) * (1 - AnimationCompleteness.poplvl4));
         
         let Level5 = Triangle(  (canvas.width * 39/64 + getAspectRatio() * levelSider())   * (1 - AnimationCompleteness.poplvl5) + AnimationCompleteness.poplvl5 * canvas.width / 2,
                                 (canvas.height/2       + (255/(1 + AnimationCompleteness.Selector))) * (1 - AnimationCompleteness.poplvl5) + AnimationCompleteness.poplvl5 * canvas.height / 2,
                                 levelSider() + (levelSider() * 16 * AnimationCompleteness.poplvl5),
                                 rgba(Theme[0]),
                                 rgba(Theme[4]),
-                                AnimationCompleteness.Selector/255 * ((2 * Math.PI - angle(canvas.width * 39/64 + getAspectRatio() * levelSider(), canvas.height / 2 + (255/(1 + AnimationCompleteness.Selector)), mouseLocation[0], mouseLocation[1])) - 0.5235988) * (1 - AnimationCompleteness.poplvl5));
+                                AnimationCompleteness.Selector/255 * ((2 * Math.PI - angle( canvas.width * 39/64 + getAspectRatio() * levelSider(), 
+                                                                                            canvas.height / 2 + (255/(1 + AnimationCompleteness.Selector)), 
+                                                                                            mouseLocation[0], 
+                                                                                            mouseLocation[1])) - 0.5235988) * (1 - AnimationCompleteness.poplvl5));
         
         let readme = Triangle(  (5 + levelSider()) * (1 - AnimationCompleteness.readme) + AnimationCompleteness.readme * canvas.width / 2,
-                                (5 + levelSider() + (255/(1 + AnimationCompleteness.Selector))) * (1 - AnimationCompleteness.readme) + AnimationCompleteness.readme * canvas.height / 2, 
+                                (5 + levelSider() + (255 / (1 + AnimationCompleteness.Selector))) * (1 - AnimationCompleteness.readme) + AnimationCompleteness.readme * canvas.height / 2, 
                                 levelSider() + (levelSider() * 16 * AnimationCompleteness.readme), 
                                 rgba(Theme[0]), 
                                 rgba(Theme[4]), 
                                 Math.cos(cubeSizer) * Math.PI * (1 - AnimationCompleteness.readme));
         
-        let Logo = logoTRI(canvas.width/2, canvas.height/2 + (255/(1 + AnimationCompleteness.Selector)));
+        let Logo = logoTRI( canvas.width / 2, 
+                            canvas.height / 2 + (255/(1 + AnimationCompleteness.Selector)));
+        
         Logo.draw();
+
         if( !AnimationCompleteness.poplvl1Bool ||
             !AnimationCompleteness.poplvl2Bool ||
             !AnimationCompleteness.poplvl3Bool ||
@@ -185,7 +244,11 @@ const Cast = () =>
             Level5.draw();
             readme.draw();
         }
-        
+        //4D686572
+        //670tt31233fe
+        //StabbySalad
+        //BASe==
+        //A113A4M
         context.font = (levelSider()/3) + "px Segoe UI"
         context.textAlign = "center";
         context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.lvl1]);
@@ -205,28 +268,28 @@ const Cast = () =>
         {
             case AnimationCompleteness.poplvl1Bool:
                 Level1.draw();
-                AnimationCompleteness.contentreadme += 0.01;
+                AnimationCompleteness.contentlvl1 += 0.01;
                 context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentreadme]);
-                context.fillText("Thank you for playing", canvas.width/2, canvas.height/8, canvas.width/4);
-                context.fillText("This is a simple Capture the Flag made by", canvas.width/2, canvas.height/4, canvas.width/3);
-                context.fillText("three college students. We hope that with this", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
-                context.fillText("we can get more people to develop their problem", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
-                context.fillText("solving skills. We also want to introduce you to", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
-                context.fillText("CTFs, which are very growth provoking yet almost always", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
-                context.fillText("intimidating on the first glance. By the end this CTF", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
-                context.fillText("you will get the gist of CTFs in general, and through hard work", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
-                context.fillText("you can achieve your goals and conquer any CTF you stumble upon.", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
-                context.fillText("We hope you have great fun", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
-
-                context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6, canvas.width/3);
+                context.fillText("Level 1", canvas.width/2, canvas.height/8, canvas.width/4);
+                context.fillText("On what seemed to be an ordinary day, your", canvas.width/2, canvas.height/4, canvas.width/3);
+                context.fillText("desktop greeted you with an unfamiliar file.", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
+                context.fillText("You decide to investigate the file in the hopes of", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
+                context.fillText("extracting information from it.", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
+                context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
+                context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
+                context.fillStyle = rgba([80, 80, 255, AnimationCompleteness.contentreadme]);
+                context.fillText("[Download]", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
+                context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentreadme]);
+                context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
+                context.fillText("Enter the flag here:", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
                 
-                Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentreadme]), 0, 0, 0, 0, canvas, context).draw();
+                Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentlvl1]), 0, 0, 0, 0, canvas, context).draw();
                 context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl1]);
                 context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
                 break;
             case AnimationCompleteness.poplvl2Bool:
                 Level2.draw();
-                AnimationCompleteness.contentreadme += 0.01;
+                AnimationCompleteness.contentlvl2 += 0.01;
                 context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentreadme]);
                 context.fillText("Thank you for playing", canvas.width/2, canvas.height/8, canvas.width/4);
                 context.fillText("This is a simple Capture the Flag made by", canvas.width/2, canvas.height/4, canvas.width/3);
@@ -241,13 +304,13 @@ const Cast = () =>
 
                 context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6, canvas.width/3);
                 
-                Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentreadme]), 0, 0, 0, 0, canvas, context).draw();
+                Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentlvl2]), 0, 0, 0, 0, canvas, context).draw();
                 context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl2]);
                 context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
                 break;
             case AnimationCompleteness.poplvl3Bool:
                 Level3.draw();
-                AnimationCompleteness.contentreadme += 0.01;
+                AnimationCompleteness.contentlvl3 += 0.01;
                 context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentreadme]);
                 context.fillText("Thank you for playing", canvas.width/2, canvas.height/8, canvas.width/4);
                 context.fillText("This is a simple Capture the Flag made by", canvas.width/2, canvas.height/4, canvas.width/3);
@@ -262,13 +325,13 @@ const Cast = () =>
 
                 context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6, canvas.width/3);
                 
-                Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentreadme]), 0, 0, 0, 0, canvas, context).draw();
+                Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentlvl3]), 0, 0, 0, 0, canvas, context).draw();
                 context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl3]);
                 context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
                 break;
             case AnimationCompleteness.poplvl4Bool:
                 Level4.draw();
-                AnimationCompleteness.contentreadme += 0.01;
+                AnimationCompleteness.contentlvl4 += 0.01;
                 context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentreadme]);
                 context.fillText("Thank you for playing", canvas.width/2, canvas.height/8, canvas.width/4);
                 context.fillText("This is a simple Capture the Flag made by", canvas.width/2, canvas.height/4, canvas.width/3);
@@ -283,28 +346,28 @@ const Cast = () =>
 
                 context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6, canvas.width/3);
                 
-                Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentreadme]), 0, 0, 0, 0, canvas, context).draw();
+                Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentlvl4]), 0, 0, 0, 0, canvas, context).draw();
                 context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl4]);
                 context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
                 break;
             case AnimationCompleteness.poplvl5Bool:
                 Level5.draw();
-                AnimationCompleteness.contentreadme += 0.01;
+                AnimationCompleteness.contentlvl5 += 0.01;
                 context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentreadme]);
-                context.fillText("Thank you for playing", canvas.width/2, canvas.height/8, canvas.width/4);
-                context.fillText("This is a simple Capture the Flag made by", canvas.width/2, canvas.height/4, canvas.width/3);
-                context.fillText("three college students. We hope that with this", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
-                context.fillText("we can get more people to develop their problem", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
-                context.fillText("solving skills. We also want to introduce you to", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
-                context.fillText("CTFs, which are very growth provoking yet almost always", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
-                context.fillText("intimidating on the first glance. By the end this CTF", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
-                context.fillText("you will get the gist of CTFs in general, and through hard work", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
-                context.fillText("you can achieve your goals and conquer any CTF you stumble upon.", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
-                context.fillText("We hope you have great fun", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
+                context.fillText("", canvas.width/2, canvas.height/8, canvas.width/4);
+                context.fillText("", canvas.width/2, canvas.height/4, canvas.width/3);
+                context.fillText("", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
+                context.fillText("", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
+                context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
+                context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
+                context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
+                context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
+                context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
+                context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
 
                 context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6, canvas.width/3);
                 
-                Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentreadme]), 0, 0, 0, 0, canvas, context).draw();
+                Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentlvl5]), 0, 0, 0, 0, canvas, context).draw();
                 context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl5]);
                 context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
                 break;
@@ -316,12 +379,14 @@ const Cast = () =>
                 context.fillText("This is a simple Capture the Flag made by", canvas.width/2, canvas.height/4, canvas.width/3);
                 context.fillText("three college students. We hope that with this", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
                 context.fillText("we can get more people to develop their problem", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
-                context.fillText("solving skills. We also want to introduce you to", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
+                context.fillText("solving skills. We also want to introduce you to", canvas.width/2, canvas.height/4 + levelSider() * 1.5, canvas.width/3);
                 context.fillText("CTFs, which are very growth provoking yet almost always", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
                 context.fillText("intimidating on the first glance. By the end this CTF", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
                 context.fillText("you will get the gist of CTFs in general, and through hard work", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
                 context.fillText("you can achieve your goals and conquer any CTF you stumble upon.", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
-                context.fillText("We hope you have great fun", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
+                context.fillText("In each level you must find the flag and submit it to gain points.", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
+                context.fillText('A flag will look like this: "CTF{...}"', canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
+                context.fillText("We hope you have great fun", canvas.width/2, canvas.height/4 + levelSider() * 4.5, canvas.width/3);
 
                 context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6, canvas.width/3);
                 
@@ -330,5 +395,7 @@ const Cast = () =>
                 context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
                 break;
         }
+        
+        context.fillText("Score: " + GetSc, canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
     }
 }
