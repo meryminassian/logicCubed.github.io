@@ -4,4 +4,5 @@
 // We also exist on Facebook:
 // https://www.facebook.com/logicCubed/
 
-window.location.replace("https://meryminas.github.io/logicCubed.github.io/");
+
+window.location.replace("https://meryminas.github.io/logicCubed.github.io/pages/entry.html");
