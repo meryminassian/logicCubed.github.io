@@ -5,4 +5,4 @@
 // https://www.facebook.com/logicCubed/
 
 
-window.location.replace("https://meryminas.github.io/logicCubed.github.io/pages/entry.html");
+window.location = "https://meryminas.github.io/logicCubed.github.io/pages/entry.html";
