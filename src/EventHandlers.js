@@ -49,6 +49,18 @@ function onKey(e)
         AnimationCompleteness.poplvl5Bool ||
         AnimationCompleteness.readmeBool)
     {
+        if(Input === "CTF{A113A4M}")
+        {
+            if(localStorage.getItem("lvl1") === "1")
+            {}
+            else
+            {
+                SetScore(GetScore() + 550);
+                localStorage.setItem("lvl1", "1");
+                alert("Nice! You did it! You have recieved points! Proceed");
+            }
+
+        }
         if(e.key === "Backspace")
         {
             if(Input.length > 0)

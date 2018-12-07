@@ -294,6 +294,8 @@ const Cast = () =>
                 context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl1]);
             context.fillText(Input, canvas.width/2, canvas.height/4 + levelSider() * 5.65, levelSider() * 6);
 
+            
+
             Octagon(canvas.width / 2 - levelSider() / 2, 
                     canvas.height / 4 + levelSider() * 7, 
                     levelSider(), 
