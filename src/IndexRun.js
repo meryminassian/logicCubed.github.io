@@ -506,14 +506,15 @@ const Cast = () =>
             context.fillText("we can get more people to develop their problem", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
             context.fillText("solving skills. We also want to introduce you to", canvas.width/2, canvas.height/4 + levelSider() * 1.5, canvas.width/3);
             context.fillText("CTFs, which are very growth provoking yet almost always", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
-            context.fillText("intimidating on the first glance. By the end this CTF", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
+            context.fillText("intimidating on the first glance. By the end of this CTF", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
             context.fillText("you will get the gist of CTFs in general, and through hard work", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
             context.fillText("you can achieve your goals and conquer any CTF you stumble upon.", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
             context.fillText("In each level you must find the flag and submit it to gain points.", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
             context.fillText('A flag will look like this: "CTF{...}"', canvas.width/2, canvas.height/4 + levelSider() * 4.5, canvas.width/3);
-            context.fillText("We hope you have great fun", canvas.width/2, canvas.height/4 + levelSider() * 5, canvas.width/3);
+            context.fillText("We hope you have great fun!", canvas.width/2, canvas.height/4 + levelSider() * 5, canvas.width/3);
+            context.fillText("By the way, you can exploit the website to gain points ", canvas.width/2, canvas.height/4 + levelSider() * 5.5, canvas.width/3);
 
-            context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6, canvas.width/3);
+            context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6.5, canvas.width/3);
             
             Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentreadme]), 0, 0, 0, 0, canvas, context).draw();
             context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentreadme]);
