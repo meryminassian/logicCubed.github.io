@@ -271,17 +271,17 @@ const Cast = () =>
             AnimationCompleteness.contentlvl1 += 0.01;
             context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl1]);
             context.fillText("The undeniable offer", canvas.width/2, canvas.height/8, canvas.width/4);
-            context.fillText("On what seemed to be an ordinary day, your", canvas.width/2, canvas.height/4, canvas.width/3);
-            context.fillText("desktop greeted you with an unfamiliar file.", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
-            context.fillText("You decide to investigate the file in the hopes of", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
-            context.fillText("extracting information from it.", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
-            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
-            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
+            context.fillText("On what seemed to be an ordinary day, your", canvas.width/2, canvas.height/4, canvas.width/2);
+            context.fillText("desktop greeted you with an unfamiliar file.", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/2);
+            context.fillText("You decide to investigate the file in the hopes of", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/2);
+            context.fillText("extracting information from it.", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/2);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/2);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/2);
             context.fillStyle = rgba([80, 80, 255, AnimationCompleteness.contentlvl1]);
-            context.fillText("[Download]", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
+            context.fillText("[Download]", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/2);
             context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl1]);
-            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
-            context.fillText("Enter the flag here:", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/2);
+            context.fillText("Enter the flag here:", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/2);
             Box(canvas.width/2 - levelSider() * 3,
                 canvas.height/4 + levelSider() * 5,
                 levelSider() * 6,
@@ -308,7 +308,7 @@ const Cast = () =>
                     context).draw();
 
             context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl1]);
-            context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
+            context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/2);
         }
         else if(AnimationCompleteness.poplvl2Bool)
         {
@@ -317,17 +317,17 @@ const Cast = () =>
             AnimationCompleteness.contentlvl2 += 0.01;
             context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl2]);
             context.fillText("Base-ic stuff", canvas.width/2, canvas.height/8, canvas.width/4);
-            context.fillText("You decide to investigate deeper, you manage", canvas.width/2, canvas.height/4, canvas.width/3);
-            context.fillText("to find a few strange packets using Wireshark.", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
-            context.fillText("Jackpot! A port is open! as you traverse into it you", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
-            context.fillText("find an empty html with only this text in it...", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
-            context.fillText("Is it encrypted?", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
-            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
+            context.fillText("You decide to investigate deeper, you manage", canvas.width/2, canvas.height/4, canvas.width/2);
+            context.fillText("to find a few strange packets using Wireshark.", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/2);
+            context.fillText("Jackpot! A port is open! as you traverse into it you", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/2);
+            context.fillText("find an empty html with only this text in it...", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/2);
+            context.fillText("Is it encrypted?", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/2);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/2);
             context.fillStyle = rgba([80, 80, 255, AnimationCompleteness.contentlvl2]);
-            context.fillText("[Download]", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
+            context.fillText("[Download]", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/2);
             context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl2]);
-            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
-            context.fillText("Enter the flag here:", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/2);
+            context.fillText("Enter the flag here:", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/2);
             Box(canvas.width/2 - levelSider() * 3,
                 canvas.height/4 + levelSider() * 5,
                 levelSider() * 6,
@@ -354,7 +354,7 @@ const Cast = () =>
                     context).draw();
 
             context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl2]);
-            context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
+            context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/2);
         }
         else if(AnimationCompleteness.poplvl3Bool)
         {
@@ -363,17 +363,17 @@ const Cast = () =>
             AnimationCompleteness.contentlvl3 += 0.01;
             context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl3]);
             context.fillText("Stab the salad", canvas.width/2, canvas.height/8, canvas.width/4);
-            context.fillText("All your phone contacts messeged you a gif", canvas.width/2, canvas.height/4, canvas.width/3);
-            context.fillText("It shows a bunch of men stabbing a bowl of salad.", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
-            context.fillText("It looks like a salad.", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
-            context.fillText("Salad.", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
-            context.fillText("Could it mean something?", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
-            context.fillText("Oh yeah, by the way, a new file popped up", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
+            context.fillText("All your phone contacts messeged you a gif", canvas.width/2, canvas.height/4, canvas.width/2);
+            context.fillText("It shows a bunch of men stabbing a bowl of salad.", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/2);
+            context.fillText("It looks like a salad.", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/2);
+            context.fillText("Salad.", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/2);
+            context.fillText("Could it mean something?", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/2);
+            context.fillText("Oh yeah, by the way, a new file popped up", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/2);
             context.fillStyle = rgba([80, 80, 255, AnimationCompleteness.contentlvl3]);
-            context.fillText("[Download]", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
+            context.fillText("[Download]", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/2);
             context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl3]);
-            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
-            context.fillText("Enter the flag here:", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/2);
+            context.fillText("Enter the flag here:", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/2);
             Box(canvas.width/2 - levelSider() * 3,
                 canvas.height/4 + levelSider() * 5,
                 levelSider() * 6,
@@ -400,7 +400,7 @@ const Cast = () =>
                     context).draw();
 
             context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl3]);
-            context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
+            context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/2);
         }
         else if(AnimationCompleteness.poplvl4Bool)
         {
@@ -409,17 +409,17 @@ const Cast = () =>
             AnimationCompleteness.contentlvl4 += 0.01;
             context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl4]);
             context.fillText("Mess", canvas.width/2, canvas.height/8, canvas.width/4);
-            context.fillText("You manage to recieve a chunk of code,", canvas.width/2, canvas.height/4, canvas.width/3);
-            context.fillText("and it looks hideous... does it even work?", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
-            context.fillText("It looks incomplete but you might get something out of it?", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
-            context.fillText("You might wanna use gloves for this one... ew", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
-            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
-            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
+            context.fillText("You manage to recieve a chunk of code,", canvas.width/2, canvas.height/4, canvas.width/2);
+            context.fillText("and it looks hideous... does it even work?", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/2);
+            context.fillText("It looks incomplete but you might get something out of it?", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/2);
+            context.fillText("You might wanna use gloves for this one... ew", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/2);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/2);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/2);
             context.fillStyle = rgba([80, 80, 255, AnimationCompleteness.contentlvl4]);
-            context.fillText("[Download]", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
+            context.fillText("[Download]", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/2);
             context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl4]);
-            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
-            context.fillText("Enter the flag here:", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/2);
+            context.fillText("Enter the flag here:", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/2);
             Box(canvas.width/2 - levelSider() * 3,
                 canvas.height/4 + levelSider() * 5,
                 levelSider() * 6,
@@ -446,7 +446,7 @@ const Cast = () =>
                     context).draw();
 
             context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl4]);
-            context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
+            context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/2);
         }        
         else if(AnimationCompleteness.poplvl5Bool)
         {
@@ -455,17 +455,17 @@ const Cast = () =>
             AnimationCompleteness.contentlvl5 += 0.01;
             context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl5]);
             context.fillText("Filum", canvas.width/2, canvas.height/8, canvas.width/4);
-            context.fillText("You recieved a message on your phone.", canvas.width/2, canvas.height/4, canvas.width/3);
-            context.fillText('It reads: "Dear subject,', canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
-            context.fillText("You have displayed slight signs of intelligence,", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
-            context.fillText("therefore we must offer you a chance to become one", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
-            context.fillText("of us, but you must find your way into this system, good luck.", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
-            context.fillText("After reading the letter you recieve multiple executables...", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
+            context.fillText("You recieved a message on your phone.", canvas.width/2, canvas.height/4, canvas.width/2);
+            context.fillText('It reads: "Dear subject,', canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/2);
+            context.fillText("You have displayed slight signs of intelligence,", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/2);
+            context.fillText("therefore we must offer you a chance to become one", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/2);
+            context.fillText("of us, but you must find your way into this system, good luck.", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/2);
+            context.fillText("After reading the letter you recieve multiple executables...", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/2);
             context.fillStyle = rgba([80, 80, 255, AnimationCompleteness.contentlvl5]);
-            context.fillText("[Download]", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
+            context.fillText("[Download]", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/2);
             context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl5]);
-            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
-            context.fillText("Enter the flag here:", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/2);
+            context.fillText("Enter the flag here:", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/2);
             Box(canvas.width/2 - levelSider() * 3,
                 canvas.height/4 + levelSider() * 5,
                 levelSider() * 6,
@@ -492,7 +492,7 @@ const Cast = () =>
                     context).draw();
 
             context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl5]);
-            context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
+            context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/2);
         }
         else if (AnimationCompleteness.readmeBool)
         {
@@ -501,24 +501,24 @@ const Cast = () =>
             AnimationCompleteness.contentreadme += 0.01;
             context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentreadme]);
             context.fillText("Thank you for playing", canvas.width/2, canvas.height/8, canvas.width/4);
-            context.fillText("This is a simple Capture the Flag made by", canvas.width/2, canvas.height/4, canvas.width/3);
-            context.fillText("three college students. We hope that with this", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
-            context.fillText("we can get more people to develop their problem", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
-            context.fillText("solving skills. We also want to introduce you to", canvas.width/2, canvas.height/4 + levelSider() * 1.5, canvas.width/3);
-            context.fillText("CTFs, which are very growth provoking yet almost always", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
-            context.fillText("intimidating on the first glance. By the end of this CTF", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
-            context.fillText("you will get the gist of CTFs in general, and through hard work", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
-            context.fillText("you can achieve your goals and conquer any CTF you stumble upon.", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
-            context.fillText("In each level you must find the flag and submit it to gain points.", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
-            context.fillText('A flag will look like this: "CTF{...}"', canvas.width/2, canvas.height/4 + levelSider() * 4.5, canvas.width/3);
-            context.fillText("We hope you have great fun!", canvas.width/2, canvas.height/4 + levelSider() * 5, canvas.width/3);
-            context.fillText("By the way, you can exploit the website to gain points :P", canvas.width/2, canvas.height/4 + levelSider() * 5.5, canvas.width/3);
+            context.fillText("This is a simple Capture the Flag made by", canvas.width/2, canvas.height/4, canvas.width/2);
+            context.fillText("three college students. We hope that with this", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/2);
+            context.fillText("we can get more people to develop their problem", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/2);
+            context.fillText("solving skills. We also want to introduce you to", canvas.width/2, canvas.height/4 + levelSider() * 1.5, canvas.width/2);
+            context.fillText("CTFs, which are very growth provoking yet almost always", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/2);
+            context.fillText("intimidating on the first glance. By the end of this CTF", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/2);
+            context.fillText("you will get the gist of CTFs in general, and through hard work", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/2);
+            context.fillText("you can achieve your goals and conquer any CTF you stumble upon.", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/2);
+            context.fillText("In each level you must find the flag and submit it to gain points.", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/2);
+            context.fillText('A flag will look like this: "CTF{...}"', canvas.width/2, canvas.height/4 + levelSider() * 4.5, canvas.width/2);
+            context.fillText("We hope you have great fun!", canvas.width/2, canvas.height/4 + levelSider() * 5, canvas.width/2);
+            context.fillText("By the way, you can exploit the website to gain points :P", canvas.width/2, canvas.height/4 + levelSider() * 5.5, canvas.width/2);
 
-            context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6.5, canvas.width/3);
+            context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6.5, canvas.width/2);
             
             Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentreadme]), 0, 0, 0, 0, canvas, context).draw();
             context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentreadme]);
-            context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
+            context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/2);
         }
         else
         {
