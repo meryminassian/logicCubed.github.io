@@ -456,10 +456,10 @@ const Cast = () =>
             context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl5]);
             context.fillText("Filum", canvas.width/2, canvas.height/8, canvas.width/4);
             context.fillText("You recieved a message on your phone.", canvas.width/2, canvas.height/4, canvas.width/2);
-            context.fillText('It reads: "Dear subject,', canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/2);
-            context.fillText("You have displayed slight signs of intelligence,", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/2);
-            context.fillText("therefore we must offer you a chance to become one", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/2);
-            context.fillText('of us, but you must find your way into this system, good luck."', canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/2);
+            context.fillText('It reads: "Dear subject, You have', canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/2);
+            context.fillText("displayed slight signs of intelligence, therefore we", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/2);
+            context.fillText("must offer you a chance to become one of us, but", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/2);
+            context.fillText('you must find your way into this system, good luck."', canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/2);
             context.fillText("After reading the letter you recieve multiple executables...", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/2);
             context.fillStyle = rgba([80, 80, 255, AnimationCompleteness.contentlvl5]);
             context.fillText("[Download]", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/2);
