@@ -12,6 +12,8 @@ document.addEventListener("wheel", onWUpdate, false);
 // Track clicks
 document.addEventListener("mousedown", onMouse, false);
 
+document.addEventListener("keydown", onKey, false);
+
 
 
 // This gets hoisted
@@ -35,6 +37,103 @@ function onWUpdate(e)
     Cubely.dz += 0.01 * e.deltaY;
 }
 
+
+// This gets hoisted up per request
+function onKey(e)
+{
+    debugger;
+    if( AnimationCompleteness.poplvl1Bool ||
+        AnimationCompleteness.poplvl2Bool ||
+        AnimationCompleteness.poplvl3Bool ||
+        AnimationCompleteness.poplvl4Bool ||
+        AnimationCompleteness.poplvl5Bool ||
+        AnimationCompleteness.readmeBool)
+    {
+        if(e.key === "Backspace")
+        {
+            if(Input.length > 0)
+            {
+                Input = Input.slice(0, -1);
+            }
+        }
+        else if(e.key === "Q" ||
+                e.key === "W" ||
+                e.key === "E" ||
+                e.key === "R" ||
+                e.key === "T" ||
+                e.key === "Y" ||
+                e.key === "U" ||
+                e.key === "I" ||
+                e.key === "O" ||
+                e.key === "P" ||
+                e.key === "A" ||
+                e.key === "S" ||
+                e.key === "D" ||
+                e.key === "F" ||
+                e.key === "G" ||
+                e.key === "H" ||
+                e.key === "J" ||
+                e.key === "K" ||
+                e.key === "L" ||
+                e.key === "=" ||
+                e.key === "Z" ||
+                e.key === "X" ||
+                e.key === "C" ||
+                e.key === "V" ||
+                e.key === "B" ||
+                e.key === "N" ||
+                e.key === "M" ||
+                e.key === "0" ||
+                e.key === "1" ||
+                e.key === "2" ||
+                e.key === "3" ||
+                e.key === "4" ||
+                e.key === "5" ||
+                e.key === "6" ||
+                e.key === "7" ||
+                e.key === "8" ||
+                e.key === "9" ||
+                e.key === "q" ||
+                e.key === "w" ||
+                e.key === "e" ||
+                e.key === "r" ||
+                e.key === "t" ||
+                e.key === "y" ||
+                e.key === "u" ||
+                e.key === "i" ||
+                e.key === "o" ||
+                e.key === "p" ||
+                e.key === "a" ||
+                e.key === "s" ||
+                e.key === "d" ||
+                e.key === "f" ||
+                e.key === "g" ||
+                e.key === "h" ||
+                e.key === "j" ||
+                e.key === "k" ||
+                e.key === "l" ||
+                e.key === "z" ||
+                e.key === "x" ||
+                e.key === "c" ||
+                e.key === "v" ||
+                e.key === "b" ||
+                e.key === "n" ||
+                e.key === "m" ||
+                e.key === "{" ||
+                e.key === "}")
+        {
+            if(e.shiftKey)
+            {
+                Input += e.key.toUpperCase();
+            }
+            else
+            {
+                Input += e.key;
+            }
+
+        }
+    }
+}
 
 
 // This gets hoisted
@@ -74,6 +173,16 @@ function onMouse(e)
                     canvas.height/4 + levelSider() * 7.65) < levelSider())
                 {
                     AnimationCompleteness.poplvl1Bool = false;
+                }
+                else if(distance(
+                    e.clientX,
+                    e.clientY,
+                    canvas.width/2,
+                    canvas.height/4 + levelSider() * 3
+                ) < levelSider())
+                {
+                     let weendow = window.open("https://github.com/meryminas/logicCubed.github.io/blob/master/Levels/1/yR23e81c.ctf")
+                    weendow.focus();
                 }
             }
             if(AnimationCompleteness.poplvl2Bool)
@@ -128,13 +237,12 @@ function onMouse(e)
             (canvas.height/2 + (255/(1 + AnimationCompleteness.Selector)))) < 5 * levelSider()/8)
         {
             AnimationCompleteness.poplvl1Bool = true;
-            console.log(1)
         }
         // lvl2
         else if(distance(e.clientX, 
             e.clientY, 
-            canvas.width * 13/32, 
-            canvas.height * 5/8) < 5 * levelSider()/8)
+            (canvas.width * 13/32 - getAspectRatio() * levelSider()), 
+            (canvas.height * 5/8   + (255/(1 + AnimationCompleteness.Selector)))) < 5 * levelSider()/8)
         {
             AnimationCompleteness.poplvl2Bool = true;
         }
@@ -142,23 +250,23 @@ function onMouse(e)
         else if(distance(e.clientX,
             e.clientY, 
             canvas.width/2, 
-            canvas.height * 3/4) < 5 * levelSider()/8)
+            (canvas.height * 3/4 + (255/(1 + AnimationCompleteness.Selector)))) < 5 * levelSider()/8)
         {
             AnimationCompleteness.poplvl3Bool = true;
         }
         // lvl4
         else if(distance(e.clientX, 
             e.clientY, 
-            canvas.width * 19/32, 
-            canvas.height * 5/8) < 5 * levelSider()/8)
+            (canvas.width * 19/32 + getAspectRatio() * levelSider()), 
+            (canvas.height * 5/8   + (255/(1 + AnimationCompleteness.Selector)))) < 5 * levelSider()/8)
         {
             AnimationCompleteness.poplvl4Bool = true;
         }
         // lvl5
         else if(distance(e.clientX, 
             e.clientY, 
-            canvas.width * 39/64, 
-            canvas.height/2) < 5 * levelSider()/8)
+            (canvas.width * 39/64 + getAspectRatio() * levelSider()), 
+            (canvas.height/2       + (255/(1 + AnimationCompleteness.Selector)))) < 5 * levelSider()/8)
         {
             AnimationCompleteness.poplvl5Bool = true;
         }

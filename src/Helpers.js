@@ -45,7 +45,7 @@ const GetScore = () =>
     }
     else
     {
-        return parseInt(localStorage.getItem("score"));
+        return Number(localStorage.getItem("score"));
     }
 }
 
@@ -100,10 +100,9 @@ const angle = (x, y, x_2, y_2) =>
     return Math.atan2((y - y_2), (x_2 - x));
 }
 
-function openInNewTab(url) 
+const download = (url) =>
 {
-    var jar = window.open(url, '_blank');
-    jar.focus();
+    window.open(url, '_blank');
 }
 
 

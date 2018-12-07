@@ -7,7 +7,7 @@
 // https://twitter.com/cubedlogic
 
 
-let cubeSizer = 0;
+
 // Triangle positions in a semicircle
 // Rotate(canvas.width/2 + radius, canvas.height/2, n/Math.PI starting from 0, canvas.width,)
 //let Level1 = Triangle(canvas.width * 25/64, canvas.height/2, levelSider(), rgba(Theme[0]), rgba(Theme[4]), -Math.PI / 2);
@@ -264,138 +264,175 @@ const Cast = () =>
         context.fillText("?", 5 + levelSider(), 5 + levelSider() + levelSider()/6 - 1, 100);
         
         // Make the selection dominant
-        switch(true)
+        if(AnimationCompleteness.poplvl1Bool)
         {
-            case AnimationCompleteness.poplvl1Bool:
-                Level1.draw();
-                AnimationCompleteness.contentlvl1 += 0.01;
-                context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentreadme]);
-                context.fillText("Level 1", canvas.width/2, canvas.height/8, canvas.width/4);
-                context.fillText("On what seemed to be an ordinary day, your", canvas.width/2, canvas.height/4, canvas.width/3);
-                context.fillText("desktop greeted you with an unfamiliar file.", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
-                context.fillText("You decide to investigate the file in the hopes of", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
-                context.fillText("extracting information from it.", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
-                context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
-                context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
-                context.fillStyle = rgba([80, 80, 255, AnimationCompleteness.contentreadme]);
-                context.fillText("[Download]", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
-                context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentreadme]);
-                context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
-                context.fillText("Enter the flag here:", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
-                
-                Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentlvl1]), 0, 0, 0, 0, canvas, context).draw();
+            Level1.draw();
+            context.textAlign = "center";
+            AnimationCompleteness.contentlvl1 += 0.01;
+            context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl1]);
+            context.fillText("The undeniable offer", canvas.width/2, canvas.height/8, canvas.width/4);
+            context.fillText("On what seemed to be an ordinary day, your", canvas.width/2, canvas.height/4, canvas.width/3);
+            context.fillText("desktop greeted you with an unfamiliar file.", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
+            context.fillText("You decide to investigate the file in the hopes of", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
+            context.fillText("extracting information from it.", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
+            context.fillStyle = rgba([80, 80, 255, AnimationCompleteness.contentlvl1]);
+            context.fillText("[Download]", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
+            context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl1]);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
+            context.fillText("Enter the flag here:", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
+            Box(canvas.width/2 - levelSider() * 3,
+                canvas.height/4 + levelSider() * 5,
+                levelSider() * 6,
+                levelSider() * 1,
+                rgba(Theme[3]),
+                rgba(rgba([0, 0, 0, 0])),
+                0, 0, 0, 0,
+                canvas,
+                context).draw();
                 context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl1]);
-                context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
-                break;
-            case AnimationCompleteness.poplvl2Bool:
-                Level2.draw();
-                AnimationCompleteness.contentlvl2 += 0.01;
-                context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentreadme]);
-                context.fillText("Thank you for playing", canvas.width/2, canvas.height/8, canvas.width/4);
-                context.fillText("This is a simple Capture the Flag made by", canvas.width/2, canvas.height/4, canvas.width/3);
-                context.fillText("three college students. We hope that with this", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
-                context.fillText("we can get more people to develop their problem", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
-                context.fillText("solving skills. We also want to introduce you to", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
-                context.fillText("CTFs, which are very growth provoking yet almost always", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
-                context.fillText("intimidating on the first glance. By the end this CTF", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
-                context.fillText("you will get the gist of CTFs in general, and through hard work", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
-                context.fillText("you can achieve your goals and conquer any CTF you stumble upon.", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
-                context.fillText("We hope you have great fun", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
+            context.fillText(Input, canvas.width/2, canvas.height/4 + levelSider() * 5.65, levelSider() * 6);
 
-                context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6, canvas.width/3);
-                
-                Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentlvl2]), 0, 0, 0, 0, canvas, context).draw();
-                context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl2]);
-                context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
-                break;
-            case AnimationCompleteness.poplvl3Bool:
-                Level3.draw();
-                AnimationCompleteness.contentlvl3 += 0.01;
-                context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentreadme]);
-                context.fillText("Thank you for playing", canvas.width/2, canvas.height/8, canvas.width/4);
-                context.fillText("This is a simple Capture the Flag made by", canvas.width/2, canvas.height/4, canvas.width/3);
-                context.fillText("three college students. We hope that with this", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
-                context.fillText("we can get more people to develop their problem", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
-                context.fillText("solving skills. We also want to introduce you to", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
-                context.fillText("CTFs, which are very growth provoking yet almost always", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
-                context.fillText("intimidating on the first glance. By the end this CTF", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
-                context.fillText("you will get the gist of CTFs in general, and through hard work", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
-                context.fillText("you can achieve your goals and conquer any CTF you stumble upon.", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
-                context.fillText("We hope you have great fun", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
+            Octagon(canvas.width / 2 - levelSider() / 2, 
+                    canvas.height / 4 + levelSider() * 7, 
+                    levelSider(), 
+                    levelSider(), 
+                    levelSider(), 
+                    rgba([0, 0, 0, 0]), 
+                    rgba([255, 255, 255, AnimationCompleteness.contentlvl1]), 
+                    0, 0, 0, 0, 
+                    canvas, 
+                    context).draw();
 
-                context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6, canvas.width/3);
-                
-                Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentlvl3]), 0, 0, 0, 0, canvas, context).draw();
-                context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl3]);
-                context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
-                break;
-            case AnimationCompleteness.poplvl4Bool:
-                Level4.draw();
-                AnimationCompleteness.contentlvl4 += 0.01;
-                context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentreadme]);
-                context.fillText("Thank you for playing", canvas.width/2, canvas.height/8, canvas.width/4);
-                context.fillText("This is a simple Capture the Flag made by", canvas.width/2, canvas.height/4, canvas.width/3);
-                context.fillText("three college students. We hope that with this", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
-                context.fillText("we can get more people to develop their problem", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
-                context.fillText("solving skills. We also want to introduce you to", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
-                context.fillText("CTFs, which are very growth provoking yet almost always", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
-                context.fillText("intimidating on the first glance. By the end this CTF", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
-                context.fillText("you will get the gist of CTFs in general, and through hard work", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
-                context.fillText("you can achieve your goals and conquer any CTF you stumble upon.", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
-                context.fillText("We hope you have great fun", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
+            context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl1]);
+            context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
+        }
+        else if(AnimationCompleteness.poplvl2Bool)
+        {
+            Level2.draw();
+            context.textAlign = "center";
+            AnimationCompleteness.contentlvl2 += 0.01;
+            context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl2]);
+            context.fillText("", canvas.width/2, canvas.height/8, canvas.width/4);
+            context.fillText("", canvas.width/2, canvas.height/4, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
+    
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 6, canvas.width/3);
+            
+            Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentlvl2]), 0, 0, 0, 0, canvas, context).draw();
+            context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl2]);
+            context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
+        }
+        else if(AnimationCompleteness.poplvl3Bool)
+        {
+            Level3.draw();
+            context.textAlign = "center";
+            AnimationCompleteness.contentlvl3 += 0.01;
+            context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl3]);
+            context.fillText("", canvas.width/2, canvas.height/8, canvas.width/4);
+            context.fillText("", canvas.width/2, canvas.height/4, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
 
-                context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6, canvas.width/3);
-                
-                Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentlvl4]), 0, 0, 0, 0, canvas, context).draw();
-                context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl4]);
-                context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
-                break;
-            case AnimationCompleteness.poplvl5Bool:
-                Level5.draw();
-                AnimationCompleteness.contentlvl5 += 0.01;
-                context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentreadme]);
-                context.fillText("", canvas.width/2, canvas.height/8, canvas.width/4);
-                context.fillText("", canvas.width/2, canvas.height/4, canvas.width/3);
-                context.fillText("", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
-                context.fillText("", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
-                context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
-                context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
-                context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
-                context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
-                context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
-                context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
+            context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6, canvas.width/3);
+            
+            Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentlvl3]), 0, 0, 0, 0, canvas, context).draw();
+            context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl3]);
+            context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
+        }
+        else if(AnimationCompleteness.poplvl4Bool)
+        {
+            Level4.draw();
+            context.textAlign = "center";
+            AnimationCompleteness.contentlvl4 += 0.01;
+            context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl4]);
+            context.fillText("", canvas.width/2, canvas.height/8, canvas.width/4);
+            context.fillText("", canvas.width/2, canvas.height/4, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
+    
+            context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6, canvas.width/3);
+            
+            Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentlvl4]), 0, 0, 0, 0, canvas, context).draw();
+            context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl4]);
+            context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
+        }        
+        else if(AnimationCompleteness.poplvl5Bool)
+        {
+            Level5.draw();
+            context.textAlign = "center";
+            AnimationCompleteness.contentlvl5 += 0.01;
+            context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl5]);
+            context.fillText("", canvas.width/2, canvas.height/8, canvas.width/4);
+            context.fillText("", canvas.width/2, canvas.height/4, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
+            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
 
-                context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6, canvas.width/3);
-                
-                Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentlvl5]), 0, 0, 0, 0, canvas, context).draw();
-                context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl5]);
-                context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
-                break;
-            case AnimationCompleteness.readmeBool:
-                readme.draw();
-                AnimationCompleteness.contentreadme += 0.01;
-                context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentreadme]);
-                context.fillText("Thank you for playing", canvas.width/2, canvas.height/8, canvas.width/4);
-                context.fillText("This is a simple Capture the Flag made by", canvas.width/2, canvas.height/4, canvas.width/3);
-                context.fillText("three college students. We hope that with this", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
-                context.fillText("we can get more people to develop their problem", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
-                context.fillText("solving skills. We also want to introduce you to", canvas.width/2, canvas.height/4 + levelSider() * 1.5, canvas.width/3);
-                context.fillText("CTFs, which are very growth provoking yet almost always", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
-                context.fillText("intimidating on the first glance. By the end this CTF", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
-                context.fillText("you will get the gist of CTFs in general, and through hard work", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
-                context.fillText("you can achieve your goals and conquer any CTF you stumble upon.", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
-                context.fillText("In each level you must find the flag and submit it to gain points.", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
-                context.fillText('A flag will look like this: "CTF{...}"', canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
-                context.fillText("We hope you have great fun", canvas.width/2, canvas.height/4 + levelSider() * 4.5, canvas.width/3);
+            context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6, canvas.width/3);
+            
+            Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentlvl5]), 0, 0, 0, 0, canvas, context).draw();
+            context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentlvl5]);
+            context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
 
-                context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6, canvas.width/3);
-                
-                Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentreadme]), 0, 0, 0, 0, canvas, context).draw();
-                context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentreadme]);
-                context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
-                break;
+        }
+        else if (AnimationCompleteness.readmeBool)
+        {
+            readme.draw();
+            context.textAlign = "center";
+            AnimationCompleteness.contentreadme += 0.01;
+            context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentreadme]);
+            context.fillText("Thank you for playing", canvas.width/2, canvas.height/8, canvas.width/4);
+            context.fillText("This is a simple Capture the Flag made by", canvas.width/2, canvas.height/4, canvas.width/3);
+            context.fillText("three college students. We hope that with this", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/3);
+            context.fillText("we can get more people to develop their problem", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/3);
+            context.fillText("solving skills. We also want to introduce you to", canvas.width/2, canvas.height/4 + levelSider() * 1.5, canvas.width/3);
+            context.fillText("CTFs, which are very growth provoking yet almost always", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/3);
+            context.fillText("intimidating on the first glance. By the end this CTF", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/3);
+            context.fillText("you will get the gist of CTFs in general, and through hard work", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/3);
+            context.fillText("you can achieve your goals and conquer any CTF you stumble upon.", canvas.width/2, canvas.height/4 + levelSider() * 3.5, canvas.width/3);
+            context.fillText("In each level you must find the flag and submit it to gain points.", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
+            context.fillText('A flag will look like this: "CTF{...}"', canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
+            context.fillText("We hope you have great fun", canvas.width/2, canvas.height/4 + levelSider() * 4.5, canvas.width/3);
+
+            context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6, canvas.width/3);
+            
+            Octagon(canvas.width / 2 - levelSider() / 2, canvas.height / 4 + levelSider() * 7, levelSider(), levelSider(), levelSider(), rgba([0, 0, 0, 0]), rgba([255, 255, 255, AnimationCompleteness.contentreadme]), 0, 0, 0, 0, canvas, context).draw();
+            context.fillStyle = rgba([255, 255, 255, AnimationCompleteness.contentreadme]);
+            context.fillText("x", canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
         }
         
-        context.fillText("Score: " + GetSc, canvas.width/2 + levelSider() * 0.07, canvas.height/4 + levelSider() * 7.65, canvas.width/3);
+        
+        context.textAlign = "end";
+        context.fillStyle = rgba([AnimationCompleteness.Selector, 255, AnimationCompleteness.Selector, 1])
+        context.fillText(   "Score: " + GetScore(), 
+                            canvas.width - levelSider() - (AnimationCompleteness.Selector/255 - 1) * 2 * levelSider() * GetScore().toString().length, 
+                            levelSider(), 
+                            canvas.width/3);
     }
 }

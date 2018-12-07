@@ -19,6 +19,9 @@ const Theme = [
     [255, 255, 255, 1] // White
 ]; 
 
+let cubeSizer = 0;
+let Input = "";
+
 
 let AnimationCompleteness = {
     Background: 0,
