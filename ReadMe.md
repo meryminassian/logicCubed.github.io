@@ -1,6 +1,6 @@
 # **Welcome to the Logic Cubed!**
 
-### [LogicCubed.cf](logiccubed.cf)
+### [LogicCubed.cf](http://logiccubed.cf)
 This is a CTF that has one goal.
 
 
