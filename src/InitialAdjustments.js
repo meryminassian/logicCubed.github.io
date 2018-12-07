@@ -10,6 +10,7 @@ const canvas = document.querySelector("canvas");
 // Get the canvas interface for 2d rendering
 const context = canvas.getContext("2d");
 
+
 // Colors used in this page
 const Theme = [
     [0, 0, 0, 1], // Black

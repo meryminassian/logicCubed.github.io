@@ -41,6 +41,7 @@ function onWUpdate(e)
 // This gets hoisted up per request
 function onKey(e)
 {
+    e.preventDefault();
     if( AnimationCompleteness.poplvl1Bool ||
         AnimationCompleteness.poplvl2Bool ||
         AnimationCompleteness.poplvl3Bool ||
@@ -51,6 +52,7 @@ function onKey(e)
         
         if(e.key === "Backspace")
         {
+            e.preventDefault();
             if(Input.length > 0)
             {
                 Input = Input.slice(0, -1);

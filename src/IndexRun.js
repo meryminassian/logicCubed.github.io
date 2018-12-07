@@ -512,7 +512,7 @@ const Cast = () =>
             context.fillText("In each level you must find the flag and submit it to gain points.", canvas.width/2, canvas.height/4 + levelSider() * 4, canvas.width/3);
             context.fillText('A flag will look like this: "CTF{...}"', canvas.width/2, canvas.height/4 + levelSider() * 4.5, canvas.width/3);
             context.fillText("We hope you have great fun!", canvas.width/2, canvas.height/4 + levelSider() * 5, canvas.width/3);
-            context.fillText("By the way, you can exploit the website to gain points ", canvas.width/2, canvas.height/4 + levelSider() * 5.5, canvas.width/3);
+            context.fillText("By the way, you can exploit the website to gain points :P", canvas.width/2, canvas.height/4 + levelSider() * 5.5, canvas.width/3);
 
             context.fillText("This is where your journey begins ...", canvas.width/2, canvas.height/4 + levelSider() * 6.5, canvas.width/3);
             
