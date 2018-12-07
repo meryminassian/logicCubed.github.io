@@ -41,7 +41,6 @@ function onWUpdate(e)
 // This gets hoisted up per request
 function onKey(e)
 {
-    debugger;
     if( AnimationCompleteness.poplvl1Bool ||
         AnimationCompleteness.poplvl2Bool ||
         AnimationCompleteness.poplvl3Bool ||
@@ -49,18 +48,7 @@ function onKey(e)
         AnimationCompleteness.poplvl5Bool ||
         AnimationCompleteness.readmeBool)
     {
-        if(Input === "CTF{A113A4M}")
-        {
-            if(localStorage.getItem("lvl1") === "1")
-            {}
-            else
-            {
-                SetScore(GetScore() + 550);
-                localStorage.setItem("lvl1", "1");
-                alert("Nice! You did it! You have recieved points! Proceed");
-            }
-
-        }
+        
         if(e.key === "Backspace")
         {
             if(Input.length > 0)
@@ -144,6 +132,76 @@ function onKey(e)
             }
 
         }
+        if(AnimationCompleteness.poplvl1Bool)
+        {
+            if(Input === "CTF{A113A4M}")
+            {
+                if(localStorage.getItem("lvl1") === "1")
+                {}
+                else
+                {
+                    SetScore(GetScore() + 550);
+                    localStorage.setItem("lvl1", "1");
+                    alert("Nice! You did it! You have recieved points! Proceed");
+                }
+            }
+        }
+        if(AnimationCompleteness.poplvl2Bool)
+        {
+            if(Input === "CTF{BASe==}")
+            {
+                if(localStorage.getItem("lvl2") === "1")
+                {}
+                else
+                {
+                    SetScore(GetScore() + 600);
+                    localStorage.setItem("lvl2", "1");
+                    alert("Nice! You did it! You have recieved points! Proceed");
+                }
+            }
+        }
+        if(AnimationCompleteness.poplvl3Bool)
+        {
+            if(Input === "CTF{StabbySalad}")
+            {
+                if(localStorage.getItem("lvl3") === "1")
+                {}
+                else
+                {
+                    SetScore(GetScore() + 720);
+                    localStorage.setItem("lvl3", "1");
+                    alert("Nice! You did it! You have recieved points! Proceed");
+                }
+            }
+        }
+        if(AnimationCompleteness.poplvl4Bool)
+        {
+            if(Input === "CTF{670tt31233fe}")
+            {
+                if(localStorage.getItem("lvl4") === "1")
+                {}
+                else
+                {
+                    SetScore(GetScore() + 290);
+                    localStorage.setItem("lvl4", "1");
+                    alert("Nice! You did it! You have recieved points! Proceed");
+                }
+            }
+        }
+        if(AnimationCompleteness.poplvl5Bool)
+        {
+            if(Input === "CTF{4D686572}")
+            {
+                if(localStorage.getItem("lvl5") === "1")
+                {}
+                else
+                {
+                    SetScore(GetScore() + 1750);
+                    localStorage.setItem("lvl5", "1");
+                    alert("Nice! You did it! You have recieved points! You legend!");
+                }
+            }
+        }
     }
 }
 
@@ -193,7 +251,7 @@ function onMouse(e)
                     canvas.height/4 + levelSider() * 3
                 ) < levelSider())
                 {
-                     let weendow = window.open("https://github.com/meryminas/logicCubed.github.io/blob/master/Levels/1/yR23e81c.ctf")
+                    let weendow = window.open("https://github.com/meryminas/logicCubed.github.io/blob/master/Levels/1/yR23e81c.ctf");
                     weendow.focus();
                 }
             }
@@ -207,6 +265,16 @@ function onMouse(e)
                 {
                     AnimationCompleteness.poplvl2Bool = false;
                 }
+                else if(distance(
+                    e.clientX,
+                    e.clientY,
+                    canvas.width/2,
+                    canvas.height/4 + levelSider() * 3
+                ) < levelSider())
+                {
+                    let weendow = window.open("https://github.com/meryminas/logicCubed.github.io/blob/master/Levels/2/HQ.txt");
+                    weendow.focus();
+                }
             }
             if(AnimationCompleteness.poplvl3Bool)
             {
@@ -217,6 +285,16 @@ function onMouse(e)
                     canvas.height/4 + levelSider() * 7.65) < levelSider())
                 {
                     AnimationCompleteness.poplvl3Bool = false;
+                }
+                else if(distance(
+                    e.clientX,
+                    e.clientY,
+                    canvas.width/2,
+                    canvas.height/4 + levelSider() * 3
+                ) < levelSider())
+                {
+                    let weendow = window.open("https://github.com/meryminas/logicCubed.github.io/blob/master/Levels/3/saladCease.cs");
+                    weendow.focus();
                 }
             }
             if(AnimationCompleteness.poplvl4Bool)
@@ -229,6 +307,16 @@ function onMouse(e)
                 {
                     AnimationCompleteness.poplvl4Bool = false;
                 }
+                else if(distance(
+                    e.clientX,
+                    e.clientY,
+                    canvas.width/2,
+                    canvas.height/4 + levelSider() * 3
+                ) < levelSider())
+                {
+                    let weendow = window.open("https://github.com/meryminas/logicCubed.github.io/blob/master/Levels/4/httpget.js");
+                    weendow.focus();
+                }
             }
             if(AnimationCompleteness.poplvl5Bool)
             {
@@ -239,6 +327,16 @@ function onMouse(e)
                     canvas.height/4 + levelSider() * 7.65) < levelSider())
                 {
                     AnimationCompleteness.poplvl5Bool = false;
+                }
+                else if(distance(
+                    e.clientX,
+                    e.clientY,
+                    canvas.width/2,
+                    canvas.height/4 + levelSider() * 3
+                ) < levelSider())
+                {
+                    let weendow = window.open("https://github.com/meryminas/logicCubed.github.io/tree/master/Levels/filum%20(Advanced)/applications");
+                    weendow.focus();
                 }
             }
         }
