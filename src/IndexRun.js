@@ -411,9 +411,9 @@ const Cast = () =>
             context.fillText("Mess", canvas.width/2, canvas.height/8, canvas.width/4);
             context.fillText("You manage to recieve a chunk of code,", canvas.width/2, canvas.height/4, canvas.width/2);
             context.fillText("and it looks hideous... does it even work?", canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/2);
-            context.fillText("It looks incomplete but you might get something out of it?", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/2);
-            context.fillText("You might wanna use gloves for this one... ew", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/2);
-            context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/2);
+            context.fillText("It looks incomplete but you might get something", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/2);
+            context.fillText("out of it? You might wanna use gloves", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/2);
+            context.fillText("for this one... ew", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/2);
             context.fillText("", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/2);
             context.fillStyle = rgba([80, 80, 255, AnimationCompleteness.contentlvl4]);
             context.fillText("[Download]", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/2);
