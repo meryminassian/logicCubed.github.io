@@ -459,7 +459,7 @@ const Cast = () =>
             context.fillText('It reads: "Dear subject,', canvas.width/2, canvas.height/4 + levelSider()/2, canvas.width/2);
             context.fillText("You have displayed slight signs of intelligence,", canvas.width/2, canvas.height/4  + levelSider(), canvas.width/2);
             context.fillText("therefore we must offer you a chance to become one", canvas.width/2, canvas.height/4 + levelSider() * 3/2, canvas.width/2);
-            context.fillText("of us, but you must find your way into this system, good luck.", canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/2);
+            context.fillText('of us, but you must find your way into this system, good luck."', canvas.width/2, canvas.height/4 + levelSider() * 2, canvas.width/2);
             context.fillText("After reading the letter you recieve multiple executables...", canvas.width/2, canvas.height/4 + levelSider() * 2.5, canvas.width/2);
             context.fillStyle = rgba([80, 80, 255, AnimationCompleteness.contentlvl5]);
             context.fillText("[Download]", canvas.width/2, canvas.height/4 + levelSider() * 3, canvas.width/2);
