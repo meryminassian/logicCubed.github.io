@@ -340,7 +340,7 @@ function onMouse(e)
                     canvas.height/4 + levelSider() * 3
                 ) < levelSider())
                 {
-                    let weendow = window.open("https://github.com/meryminas/logicCubed.github.io/tree/master/Levels/filum%20(Advanced)/applications");
+                    let weendow = window.open("https://github.com/meryminas/logicCubed.github.io/tree/master/Levels/filum%20(Advanced)/source/filumSolution/filum/bin/Release");
                     weendow.focus();
                 }
             }
