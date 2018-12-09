@@ -41,11 +41,7 @@ function onWUpdate(e)
 // This gets hoisted up per request
 function onKey(e)
 {
-    var $target = $(e.target||e.srcElement);
-    if(e.keyCode == 8 && !$target.is('input,[contenteditable="true"],textarea'))
-    {
-        e.preventDefault();
-    }
+    
     if( AnimationCompleteness.poplvl1Bool ||
         AnimationCompleteness.poplvl2Bool ||
         AnimationCompleteness.poplvl3Bool ||
