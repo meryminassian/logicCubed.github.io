@@ -14,6 +14,86 @@ document.addEventListener("mousedown", onMouse, false);
 
 document.addEventListener("keydown", onKey, false);
 
+document.addEventListener("paste", onPaste, false);
+
+
+function onPaste(e)
+{
+    e.stopPropagation();
+    e.preventDefault();
+    data = e.clipboardData || window.clipboardData;
+    Input = data.getData("Text");
+    if(AnimationCompleteness.poplvl1Bool)
+        {
+            if(Input === "CTF{A113A4M}")
+            {
+                if(localStorage.getItem("lvl1") === "1")
+                {}
+                else
+                {
+                    SetScore(GetScore() + 550);
+                    localStorage.setItem("lvl1", "1");
+                    alert("Nice! You did it! You have recieved points! Proceed");
+                }
+            }
+        }
+    if(AnimationCompleteness.poplvl2Bool)
+    {
+        if(Input === "CTF{BASe==}")
+        {
+            if(localStorage.getItem("lvl2") === "1")
+            {}
+            else
+            {
+                SetScore(GetScore() + 600);
+                localStorage.setItem("lvl2", "1");
+                alert("Nice! You did it! You have recieved points! Proceed");
+            }
+        }
+    }
+    if(AnimationCompleteness.poplvl3Bool)
+    {
+        if(Input === "CTF{StabbySalad}")
+        {
+            if(localStorage.getItem("lvl3") === "1")
+            {}
+            else
+            {
+                SetScore(GetScore() + 720);
+                localStorage.setItem("lvl3", "1");
+                alert("Nice! You did it! You have recieved points! Proceed");
+            }
+        }
+    }
+    if(AnimationCompleteness.poplvl4Bool)
+    {
+        if(Input === "CTF{670tt31233fe}")
+        {
+            if(localStorage.getItem("lvl4") === "1")
+            {}
+            else
+            {
+                SetScore(GetScore() + 290);
+                localStorage.setItem("lvl4", "1");
+                alert("Nice! You did it! You have recieved points! Proceed");
+            }
+        }
+    }
+    if(AnimationCompleteness.poplvl5Bool)
+    {
+        if(Input === "CTF{4D686572}")
+        {
+            if(localStorage.getItem("lvl5") === "1")
+            {}
+            else
+            {
+                SetScore(GetScore() + 1750);
+                localStorage.setItem("lvl5", "1");
+                alert("Nice! You did it! You have recieved points! You legend!");
+            }
+        }
+    }
+}
 
 
 // This gets hoisted
