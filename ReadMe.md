@@ -19,7 +19,7 @@ If you find bugs, this is what you have to do:
 :)
 
 
-We thank you for showing interest
+We thank you for showing interest!
 
 
 We also exist on Facebook:
