@@ -22,7 +22,7 @@ function onPaste(e)
     e.stopPropagation();
     e.preventDefault();
     data = e.clipboardData || window.clipboardData;
-    Input = data.getData("Text");
+    Input = data.getData("Text").replace(/\s/g,"");
     if(AnimationCompleteness.poplvl1Bool)
         {
             if(Input === "CTF{A113A4M}")
